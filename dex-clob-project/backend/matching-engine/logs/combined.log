@@ -1,0 +1,2820 @@
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-21T14:02:36.165Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-21T14:02:36.193Z'
+}
+{
+  component: 'DatabaseManager',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-21T14:03:35.874Z'
+}
+{
+  component: 'MatchingEngine',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-21T14:03:35.891Z'
+}
+{
+  component: 'DatabaseManager',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-21T14:04:16.134Z'
+}
+{
+  component: 'MatchingEngine',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-21T14:04:16.154Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:05:14.619Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:05:14.622Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:05:14.621Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:05:14.624Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:05:14.624Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /',
+  timestamp: '2025-08-21T14:05:27.994Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /favicon.ico',
+  timestamp: '2025-08-21T14:05:29.318Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:05:36.176Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:05:36.180Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:05:36.182Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:06:02.879Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:06:02.882Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:06:02.881Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:06:02.884Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:06:02.884Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /',
+  timestamp: '2025-08-21T14:06:06.139Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:06:40.326Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:06:40.330Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:06:40.333Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:07:58.423Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:07:58.427Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:07:58.426Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:07:58.430Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:07:58.431Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /',
+  timestamp: '2025-08-21T14:08:03.153Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:08:20.643Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:08:20.647Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:08:20.649Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:09:28.367Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:09:28.370Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:09:28.369Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:09:28.372Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:09:28.372Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /',
+  timestamp: '2025-08-21T14:09:32.388Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:09:54.620Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:09:54.628Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:09:54.630Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:11:48.337Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:11:48.340Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:11:48.340Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:11:48.342Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:11:48.343Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /',
+  timestamp: '2025-08-21T14:11:52.490Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-21T14:11:54.470Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/market-data',
+  timestamp: '2025-08-21T14:11:54.481Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC',
+  timestamp: '2025-08-21T14:11:54.493Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orders',
+  timestamp: '2025-08-21T14:11:54.503Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH%2FUSDC',
+  timestamp: '2025-08-21T14:12:07.486Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/orders',
+  timestamp: '2025-08-21T14:13:16.083Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/orders',
+  timestamp: '2025-08-21T14:13:16.109Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH%2FUSDC',
+  timestamp: '2025-08-21T14:13:17.130Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orders',
+  timestamp: '2025-08-21T14:13:17.141Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:15:19.205Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:15:19.207Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:15:19.208Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:15:20.771Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:15:20.780Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:15:20.779Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:15:20.791Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:15:20.791Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:15:30.882Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:15:30.888Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:15:30.894Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:15:31.670Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:15:31.672Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:15:31.672Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:15:31.675Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:15:31.675Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:15:44.802Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:15:44.804Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:15:44.806Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:15:45.325Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:15:45.331Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:15:45.329Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:15:45.335Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:15:45.336Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:15:55.350Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:15:55.351Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:15:55.353Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:15:55.957Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:15:55.959Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:15:55.959Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:15:55.962Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:15:55.962Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:16:04.486Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:16:04.496Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:16:04.518Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:16:05.420Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:16:05.423Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:16:05.423Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:16:05.425Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:16:05.426Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:16:16.138Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:16:16.141Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:16:16.143Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:16:16.588Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:16:16.591Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:16:16.590Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:16:16.593Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:16:16.593Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:16:25.157Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:16:25.159Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:16:25.160Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:16:25.755Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:16:25.758Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:16:25.758Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:16:25.760Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:16:25.761Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:17:07.535Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:17:07.537Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:17:07.539Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:17:08.122Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:17:08.125Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:17:08.125Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:17:08.128Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:17:08.128Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:17:54.926Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:17:54.935Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:17:54.938Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:17:55.533Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:17:55.536Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:17:55.535Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:17:55.538Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:17:55.538Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:18:02.278Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:18:02.289Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:18:02.297Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:18:03.362Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:18:03.366Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:18:03.366Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:18:03.370Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:18:03.371Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:18:16.277Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:18:16.281Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:18:16.287Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:18:16.811Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:18:16.815Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:18:16.815Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:18:16.817Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:18:16.818Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:18:23.869Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:18:23.876Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:18:23.885Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:18:37.953Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:18:37.955Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:18:37.955Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:18:37.958Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:18:37.958Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:18:51.910Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:18:51.917Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:18:51.919Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:18:52.518Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:18:52.521Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:18:52.520Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:18:52.523Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:18:52.523Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:19:00.244Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:19:00.252Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:19:00.258Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:19:01.205Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:19:01.208Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:19:01.207Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:19:01.211Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:19:01.211Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:19:07.513Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:19:07.518Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:19:07.521Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:19:08.052Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:19:08.056Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:19:08.056Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:19:08.060Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:19:08.060Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:19:14.423Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:19:14.429Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:19:14.433Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:19:14.980Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:19:14.984Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:19:14.983Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:19:14.987Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:19:14.987Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:19:23.267Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:19:23.271Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:19:23.274Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:19:23.765Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:19:23.768Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:19:23.767Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:19:23.770Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:19:23.771Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:20:00.434Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:20:00.439Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:20:00.444Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:20:01.136Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:20:01.140Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:20:01.139Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:20:01.142Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:20:01.143Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:20:09.154Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:20:09.156Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:20:09.157Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:20:09.663Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:20:09.667Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:20:09.666Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:20:09.671Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:20:09.672Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:20:22.919Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:20:22.923Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:20:22.928Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:20:23.612Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:20:23.615Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:20:23.615Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:20:23.618Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:20:23.618Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:22:59.060Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:22:59.063Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:22:59.062Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use ::1:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at GetAddrInfoReqWrap.callback (node:net:2206:7)
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '::1',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:22:59.066Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:22:59.071Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:28:38.049Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:28:38.056Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:28:38.058Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:36:05.892Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:36:05.897Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:36:05.900Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:36:05.901Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:36:05.897Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:38:12.056Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:38:12.059Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:38:12.061Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:45:44.519Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:45:44.524Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:45:44.528Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:45:44.528Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:45:44.523Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:47:17.089Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:47:17.093Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:47:17.092Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use ::1:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at GetAddrInfoReqWrap.callback (node:net:2206:7)
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '::1',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:47:17.098Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:47:17.101Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:47:24.265Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:47:24.268Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:47:24.269Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:48:33.559Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:48:33.571Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:48:33.580Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:48:33.581Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:48:33.571Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '::1',
+  userAgent: 'Wget',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-21T14:49:14.827Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:49:48.657Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:49:48.660Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:49:48.668Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:49:57.485Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:49:57.489Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:49:57.490Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:51:10.715Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:51:10.722Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:51:10.729Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:51:10.729Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:51:10.721Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:52:05.299Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:52:05.302Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:52:05.303Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:52:06.631Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:52:06.635Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:52:06.635Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:52:06.639Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:52:06.639Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:52:45.008Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:52:45.018Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:52:45.024Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T14:52:53.136Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:52:53.140Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T14:52:53.142Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:54:06.749Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:54:06.761Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T14:54:06.760Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T14:54:06.770Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T14:54:06.771Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Wget',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-21T14:58:00.025Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:59:09.720Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:59:09.723Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:59:09.729Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T14:59:49.502Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T14:59:49.508Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T14:59:49.515Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T15:00:00.407Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:00:00.410Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T15:00:00.411Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:01:15.817Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:01:15.828Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T15:01:15.827Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on localhost:3001',
+  timestamp: '2025-08-21T15:01:15.836Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T15:01:15.837Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:02:23.511Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:02:23.516Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:02:23.524Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-21T15:02:48.815Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:02:48.818Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T15:02:48.819Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:03:58.612Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:03:58.624Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3001',
+  timestamp: '2025-08-21T15:03:58.630Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T15:03:58.630Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T15:03:58.623Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-21T15:04:30.830Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/market-data',
+  timestamp: '2025-08-21T15:04:38.668Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/orderbook/ETH-USDT',
+  timestamp: '2025-08-21T15:04:59.564Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /orderbook/ETH-USDT',
+  timestamp: '2025-08-21T15:05:15.333Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /market-data',
+  timestamp: '2025-08-21T15:05:29.084Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/market-data',
+  timestamp: '2025-08-21T15:05:48.164Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH-USDC',
+  timestamp: '2025-08-21T15:06:08.373Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC',
+  timestamp: '2025-08-21T15:06:21.901Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '172.18.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH%2FUSDC',
+  timestamp: '2025-08-21T15:06:34.853Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:42:11.936Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:42:11.939Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:42:11.944Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:42:18.678Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:42:18.681Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:42:18.686Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:42:37.859Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:42:37.862Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:42:37.867Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:42:46.860Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:42:46.863Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:42:46.869Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:43:01.846Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:43:01.849Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:43:01.854Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:43:11.382Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:43:11.385Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:43:11.391Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:43:26.710Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:43:26.714Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:43:26.725Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:43:47.890Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:43:47.893Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:43:47.900Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:44:03.789Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:44:03.793Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:44:03.799Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:44:19.617Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:44:19.621Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:44:19.628Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:44:34.191Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:44:34.194Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:44:34.199Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:45:07.433Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:45:07.436Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:45:07.441Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:45:25.696Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:45:25.701Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:45:25.710Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:45:59.978Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:45:59.981Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:45:59.986Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:46:07.702Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:46:07.705Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:46:07.710Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:47:58.386Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:47:58.393Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:47:58.401Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:48:06.882Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:48:06.886Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:48:06.894Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-21T15:52:14.319Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:52:14.407Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:52:14.409Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-21T15:52:14.410Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:52:14.419Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-21T15:54:32.793Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:54:32.836Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:54:32.837Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-21T15:54:32.838Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T15:54:32.837Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-21T15:54:32.838Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-21T15:54:32.840Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T15:54:32.840Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-21T15:54:32.841Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-21T15:54:32.841Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-21T15:55:01.805Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:55:01.808Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T15:55:01.811Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-21T15:55:14.972Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:55:15.012Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:55:15.013Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-21T15:55:15.013Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T15:55:15.013Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-21T15:55:15.014Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-21T15:55:15.016Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T15:55:15.016Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-21T15:55:15.016Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-21T15:55:15.017Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-21T15:57:06.420Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:57:06.422Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T15:57:06.423Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-21T15:57:18.442Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:57:18.486Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:57:18.488Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-21T15:57:18.489Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T15:57:18.487Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-21T15:57:18.489Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-21T15:57:18.492Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T15:57:18.492Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-21T15:57:18.492Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-21T15:57:18.493Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-21T15:58:01.039Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-21T15:58:01.043Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-21T15:58:01.045Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-21T15:58:51.481Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-21T15:58:51.521Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-21T15:58:51.522Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-21T15:58:51.522Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-21T15:58:51.522Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-21T15:58:51.523Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-21T15:58:51.524Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-21T15:58:51.525Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-21T15:58:51.525Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-21T15:58:51.526Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-21T15:59:00.325Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/contract/stats',
+  timestamp: '2025-08-21T15:59:00.341Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/orders/validate',
+  timestamp: '2025-08-21T15:59:00.376Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'test_order_1',
+  valid: true,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-21T15:59:00.377Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC',
+  timestamp: '2025-08-21T15:59:00.389Z'
+}

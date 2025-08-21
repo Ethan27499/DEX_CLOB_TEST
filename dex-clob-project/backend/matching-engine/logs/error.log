@@ -1,0 +1,607 @@
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-21T14:02:36.165Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-21T14:02:36.193Z'
+}
+{
+  component: 'DatabaseManager',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-21T14:03:35.874Z'
+}
+{
+  component: 'MatchingEngine',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-21T14:03:35.891Z'
+}
+{
+  component: 'DatabaseManager',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-21T14:04:16.134Z'
+}
+{
+  component: 'MatchingEngine',
+  error: error: database "dex_matching_engine" does not exist
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:150:7) {
+    length: 104,
+    severity: 'FATAL',
+    code: '3D000',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'postinit.c',
+    line: '948',
+    routine: 'InitPostgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-21T14:04:16.154Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use ::1:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at GetAddrInfoReqWrap.callback (node:net:2206:7)
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '::1',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:22:59.066Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use ::1:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at GetAddrInfoReqWrap.callback (node:net:2206:7)
+      at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '::1',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:47:17.098Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:49:48.665Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:52:45.021Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:59:09.726Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T14:59:49.512Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:02:23.521Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:42:11.942Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:42:18.684Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:42:37.865Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:42:46.866Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:43:01.852Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:43:11.388Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:43:26.721Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:43:47.897Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:44:03.797Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:44:19.625Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:44:34.197Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:45:07.439Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:45:25.706Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:45:59.984Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:46:07.708Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:47:58.397Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:48:06.891Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: listen EADDRINUSE: address already in use 0.0.0.0:3001
+      at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+      at listenInCluster (node:net:1997:12)
+      at node:net:2206:7
+      at processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -98,
+    syscall: 'listen',
+    address: '0.0.0.0',
+    port: 3001
+  },
+  level: 'error',
+  message: 'Uncaught Exception:',
+  timestamp: '2025-08-21T15:52:14.413Z'
+}

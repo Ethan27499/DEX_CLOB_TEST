@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEX CLOB WebSocket Test</title>
+</head>
+<body>
+    <h1>DEX CLOB WebSocket Test</h1>
+    <div id="status">Connecting...</div>
+    <div id="messages"></div>
+    
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script>
+        const socket = io('http://localhost:3001');
+        const status = document.getElementById('status');
+        const messages = document.getElementById('messages');
+        
+        socket.on('connect', () => {
+            status.innerHTML = '✅ Connected to DEX CLOB';
+            console.log('Connected to server');
+            
+            // Subscribe to orderbook updates
+            socket.emit('subscribe_orderbook', { pair: 'ETH/USDC' });
+            
+            // Subscribe to trades
+            socket.emit('subscribe_trades', { pair: 'ETH/USDC' });
+        });
+        
+        socket.on('connection_established', (data) => {
+            messages.innerHTML += `<p>🎉 ${data.message}</p>`;
+        });
+        
+        socket.on('orderbook_update', (data) => {
+            messages.innerHTML += `<p>📊 Orderbook update for ${data.pair}</p>`;
+        });
+        
+        socket.on('trade_executed', (data) => {
+            messages.innerHTML += `<p>💰 Trade executed: ${data.amount} ${data.pair} at ${data.price}</p>`;
+        });
+        
+        socket.on('disconnect', () => {
+            status.innerHTML = '❌ Disconnected';
+        });
+        
+        socket.on('error', (error) => {
+            console.error('Socket error:', error);
+            status.innerHTML = '❌ Connection error';
+        });
+    </script>
+</body>
+</html>

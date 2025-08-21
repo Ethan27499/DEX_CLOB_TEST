@@ -1,0 +1,14 @@
+{
+  "name": "@dex-clob/shared",
+  "version": "1.0.0",
+  "description": "Shared types and utilities for DEX CLOB project",
+  "main": "index.js",
+  "dependencies": {
+    "ethers": "^6.6.2",
+    "big.js": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/big.js": "^6.1.6",
+    "typescript": "^5.1.3"
+  }
+}
