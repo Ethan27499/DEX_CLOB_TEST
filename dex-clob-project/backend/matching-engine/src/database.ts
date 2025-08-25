@@ -290,7 +290,7 @@ export class DatabaseManager {
     ]);
   }
 
-  public async getTrades(pair?: string, limit: number = 50, offset: number = 0): Promise<Trade[]> {
+  public async getTrades(pair?: string, limit: number = 50, page: number = 1): Promise<Trade[]> {
     let query = 'SELECT * FROM trades';
     const params: any[] = [];
     
@@ -299,6 +299,7 @@ export class DatabaseManager {
       params.push(pair);
     }
     
+    const offset = (page - 1) * limit;
     query += ' ORDER BY timestamp DESC LIMIT $' + (params.length + 1) + ' OFFSET $' + (params.length + 2);
     params.push(limit, offset);
     

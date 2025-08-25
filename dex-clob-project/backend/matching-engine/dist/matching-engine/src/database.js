@@ -254,13 +254,14 @@ class DatabaseManager {
             trade.chainId,
         ]);
     }
-    async getTrades(pair, limit = 50, offset = 0) {
+    async getTrades(pair, limit = 50, page = 1) {
         let query = 'SELECT * FROM trades';
         const params = [];
         if (pair) {
             query += ' WHERE pair = $1';
             params.push(pair);
         }
+        const offset = (page - 1) * limit;
         query += ' ORDER BY timestamp DESC LIMIT $' + (params.length + 1) + ' OFFSET $' + (params.length + 2);
         params.push(limit, offset);
         const result = await this.pool.query(query, params);

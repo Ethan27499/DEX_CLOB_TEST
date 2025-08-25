@@ -25,6 +25,9 @@ export declare class APIRouter {
     private getBatch;
     private getContractStats;
     private validateOrderOnChain;
+    private getOrderbookDepth;
+    private getOrderbookTrades;
+    private seedOrderbook;
     getRouter(): Router;
 }
 //# sourceMappingURL=routes.d.ts.map

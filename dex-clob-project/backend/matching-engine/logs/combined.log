@@ -2818,3 +2818,4802 @@
   message: 'GET /api/v1/orderbook/ETH/USDC',
   timestamp: '2025-08-21T15:59:00.389Z'
 }
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T02:43:54.137Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:43:54.142Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T02:43:56.408Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:43:56.417Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:43:59.238Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T02:44:54.033Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:44:54.040Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:46:46.579Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T02:47:47.237Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:47:47.243Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T02:49:48.648Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:49:48.654Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T02:50:49.405Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:50:49.410Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:51:50.119Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:54:52.151Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:55:52.845Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T02:57:54.186Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:57:54.191Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T02:59:55.506Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T03:00:56.229Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T03:01:56.916Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T03:05:59.643Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T03:05:59.649Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T03:09:01.751Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T03:09:01.756Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T03:10:02.502Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T03:10:02.508Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-22T03:11:03.201Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-22T03:11:03.206Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:30:56.681Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:30:56.695Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:31:00.130Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:31:00.141Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:31:03.939Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:31:09.374Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:31:09.383Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:31:28.015Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:32:07.861Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:32:07.868Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:32:59.735Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:32:59.742Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:34:00.717Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:34:00.724Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:35:01.464Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:35:01.469Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:36:02.203Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:36:02.209Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:37:02.895Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:37:02.901Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:38:03.607Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:38:03.612Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:39:04.290Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:39:04.296Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:40:04.968Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:40:04.974Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:42:06.446Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:42:06.452Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:43:07.117Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:43:07.123Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:44:07.869Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:45:08.623Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:45:08.629Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:46:09.346Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:46:09.351Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:47:10.063Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:47:10.068Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:48:10.826Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:48:10.832Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:51:13.066Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:51:13.073Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:52:13.796Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:52:13.801Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:54:15.219Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:56:16.628Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:56:16.634Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:57:17.368Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:57:17.373Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T12:59:18.888Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T12:59:18.894Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-24T13:01:20.248Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-24T13:01:20.255Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:48:44.092Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:48:44.108Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:48:46.776Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:48:46.790Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:48:54.857Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:48:54.871Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:48:58.688Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:48:58.701Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:49:37.898Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:50:56.170Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:50:56.176Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:53:58.550Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:53:58.555Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:54:59.302Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:54:59.310Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:56:00.070Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:56:00.075Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:57:01.115Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:57:01.123Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:59:02.803Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:59:02.809Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T12:59:52.908Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at async MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:200:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T12:59:52.928Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async DatabaseManager.connect (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:25:22)
+      at async MatchingEngineServer.start (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/index.ts:200:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -111,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T12:59:52.935Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T13:00:03.658Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T13:00:03.664Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T13:01:04.374Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T13:01:04.381Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T13:02:05.185Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T13:02:05.192Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T13:03:06.055Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T13:03:06.060Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T13:05:07.564Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T13:05:07.570Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T13:06:08.344Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T13:06:08.349Z'
+}
+{
+  component: 'DatabaseManager',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-25T13:07:09.099Z'
+}
+{
+  component: 'MatchingEngine',
+  error: Error: getaddrinfo ENOTFOUND postgres
+      at /app/node_modules/pg-pool/index.js:45:11
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async DatabaseManager.connect (/app/dist/src/database.js:22:28)
+      at async MatchingEngineServer.start (/app/dist/src/index.js:116:13) {
+    errno: -3008,
+    code: 'ENOTFOUND',
+    syscall: 'getaddrinfo',
+    hostname: 'postgres'
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-25T13:07:09.105Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:08:10.579Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:08:10.583Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:08:10.583Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3001',
+  timestamp: '2025-08-25T13:08:10.586Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:08:10.587Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:08:33.472Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:08:33.531Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:08:33.532Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:08:33.532Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:08:33.531Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:08:33.532Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:08:33.534Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:08:33.534Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:08:33.535Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:08:33.535Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:08:39.654Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:08:47.684Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/contract/stats',
+  timestamp: '2025-08-25T13:08:47.695Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:08:47.713Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:08:47.717Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1',
+  timestamp: '2025-08-25T13:08:47.717Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_2',
+  timestamp: '2025-08-25T13:08:47.718Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_3',
+  timestamp: '2025-08-25T13:08:47.718Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1',
+  timestamp: '2025-08-25T13:08:47.719Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_2',
+  timestamp: '2025-08-25T13:08:47.719Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_3',
+  timestamp: '2025-08-25T13:08:47.720Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:08:47.718Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:08:47.718Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:08:47.719Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:08:47.719Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:08:47.720Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC',
+  timestamp: '2025-08-25T13:08:47.745Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/depth',
+  timestamp: '2025-08-25T13:08:47.783Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/trades',
+  timestamp: '2025-08-25T13:08:47.804Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_1) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_1) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:08:47.917Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:08:47.927Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_2) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_2) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:08:47.928Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:08:47.929Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_3) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_3) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:08:47.930Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:08:47.931Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_6) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_6) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:08:47.933Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:08:47.933Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_4) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_4) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:08:47.934Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:08:47.935Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_5) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_5) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:08:47.936Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:08:47.938Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'HTTP server closed',
+  timestamp: '2025-08-25T13:08:47.949Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:08:47.951Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-25T13:08:47.958Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:09:52.903Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:09:52.971Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:09:52.973Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:09:52.974Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:09:52.973Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:09:52.975Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:09:52.980Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:09:52.981Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:09:52.985Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:09:52.986Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:10:11.556Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:10:11.605Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:10:11.606Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:10:11.607Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:10:11.613Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:10:17.802Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:10:29.530Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:10:38.918Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:10:38.922Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1',
+  timestamp: '2025-08-25T13:10:38.921Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_2',
+  timestamp: '2025-08-25T13:10:38.923Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_3',
+  timestamp: '2025-08-25T13:10:38.923Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1',
+  timestamp: '2025-08-25T13:10:38.924Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_2',
+  timestamp: '2025-08-25T13:10:38.926Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_3',
+  timestamp: '2025-08-25T13:10:38.927Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:10:38.923Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:10:38.924Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:10:38.925Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:10:38.926Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:10:38.928Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_5) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_5) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:10:39.003Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:10:39.020Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:10:39.019Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'HTTP server closed',
+  timestamp: '2025-08-25T13:10:39.019Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket connections closed',
+  timestamp: '2025-08-25T13:10:39.020Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:10:39.022Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:11:24.895Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:11:24.942Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:11:24.943Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:11:24.943Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:11:24.943Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:11:24.944Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:11:24.946Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:11:24.946Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:11:24.946Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:11:24.947Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:12:01.535Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:12:01.539Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-25T13:12:01.541Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:12:58.835Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:12:58.903Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:12:58.905Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:12:58.905Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:12:58.904Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:12:58.905Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:12:58.907Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:12:58.907Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:12:58.908Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:12:58.908Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:13:12.620Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:13:12.622Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-25T13:13:12.624Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:13:23.900Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:13:23.978Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:13:23.979Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:13:23.980Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:13:23.979Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:13:23.981Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:13:23.983Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:13:23.983Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:13:23.983Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:13:23.984Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:13:30.340Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/orderbook/ETH/USDT',
+  timestamp: '2025-08-25T13:13:47.498Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/seed-orderbook/ETH/USDT',
+  timestamp: '2025-08-25T13:13:54.842Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:14:16.032Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:14:35.244Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:14:35.248Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1',
+  timestamp: '2025-08-25T13:14:35.247Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_2',
+  timestamp: '2025-08-25T13:14:35.249Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_3',
+  timestamp: '2025-08-25T13:14:35.249Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1',
+  timestamp: '2025-08-25T13:14:35.250Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_2',
+  timestamp: '2025-08-25T13:14:35.251Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_3',
+  timestamp: '2025-08-25T13:14:35.252Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:14:35.249Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:14:35.250Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:14:35.251Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:14:35.252Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:14:35.253Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_3) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_3) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:14:35.310Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:14:35.336Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:15:01.816Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:15:01.856Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:15:01.857Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:15:01.857Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:15:01.857Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:15:01.858Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:15:01.859Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:15:01.860Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:15:01.860Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:15:01.861Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:15:20.029Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:15:20.033Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-25T13:15:20.038Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:18:30.271Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:18:30.321Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:18:30.322Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:18:30.323Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:18:30.322Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:18:30.323Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:18:30.326Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:18:30.326Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:18:30.326Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:18:30.327Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:18:47.333Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:18:47.335Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-25T13:18:47.336Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:19:27.613Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:19:27.657Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:19:27.659Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:19:27.659Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:19:27.658Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:19:27.659Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:19:27.661Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:19:27.662Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:19:27.662Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:19:27.663Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:19:58.618Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:21:39.236Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:21:39.239Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1',
+  timestamp: '2025-08-25T13:21:39.238Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_2',
+  timestamp: '2025-08-25T13:21:39.240Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_3',
+  timestamp: '2025-08-25T13:21:39.241Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1',
+  timestamp: '2025-08-25T13:21:39.243Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_2',
+  timestamp: '2025-08-25T13:21:39.244Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_3',
+  timestamp: '2025-08-25T13:21:39.245Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:21:39.241Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:21:39.242Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:21:39.243Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:21:39.245Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:21:39.246Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 256,
+      severity: 'ERROR',
+      code: '23503',
+      detail: 'Key (user_id)=(test_user_1) is not present in table "users".',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_user_id_fkey',
+      file: 'ri_triggers.c',
+      line: '2596',
+      routine: 'ri_ReportViolation'
+    },
+    promise: Promise {
+      <rejected> error: insert or update on table "orders" violates foreign key constraint "orders_user_id_fkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 256,
+        severity: 'ERROR',
+        code: '23503',
+        detail: 'Key (user_id)=(test_user_1) is not present in table "users".',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_user_id_fkey',
+        file: 'ri_triggers.c',
+        line: '2596',
+        routine: 'ri_ReportViolation'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:21:39.311Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:21:39.330Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:21:39.328Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'HTTP server closed',
+  timestamp: '2025-08-25T13:21:39.329Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket connections closed',
+  timestamp: '2025-08-25T13:21:39.331Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:21:39.333Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:23:43.346Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:23:43.390Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:23:43.392Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:23:43.392Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:23:43.391Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:23:43.392Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:23:43.394Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:23:43.394Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:23:43.395Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:23:43.395Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:23:51.565Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:24:00.070Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1',
+  timestamp: '2025-08-25T13:24:00.083Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:24:00.083Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_2',
+  timestamp: '2025-08-25T13:24:00.084Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_3',
+  timestamp: '2025-08-25T13:24:00.085Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1',
+  timestamp: '2025-08-25T13:24:00.085Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_2',
+  timestamp: '2025-08-25T13:24:00.086Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_3',
+  timestamp: '2025-08-25T13:24:00.087Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:24:00.084Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:24:00.085Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:24:00.086Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:24:00.086Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:24:00.087Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC',
+  timestamp: '2025-08-25T13:24:09.751Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/depth',
+  timestamp: '2025-08-25T13:24:19.516Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/trades',
+  timestamp: '2025-08-25T13:24:36.975Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/trades',
+  timestamp: '2025-08-25T13:24:53.545Z'
+}
+{
+  component: 'APIRouter',
+  error: error: OFFSET must not be negative
+      at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async DatabaseManager.getTrades (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:306:20)
+      at async APIRouter.getTrades (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/routes.ts:278:22) {
+    length: 91,
+    severity: 'ERROR',
+    code: '2201X',
+    detail: undefined,
+    hint: undefined,
+    position: undefined,
+    internalPosition: undefined,
+    internalQuery: undefined,
+    where: undefined,
+    schema: undefined,
+    table: undefined,
+    column: undefined,
+    dataType: undefined,
+    constraint: undefined,
+    file: 'nodeLimit.c',
+    line: '372',
+    routine: 'recompute_limits'
+  },
+  level: 'error',
+  message: 'Error fetching trades:',
+  timestamp: '2025-08-25T13:24:53.547Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:26:01.758Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:26:01.763Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-25T13:26:01.764Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:26:07.617Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:26:07.684Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:26:07.686Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:26:07.687Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:26:07.688Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:26:07.690Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:26:07.691Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:26:07.692Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:26:07.693Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:26:07.685Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/trades',
+  timestamp: '2025-08-25T13:26:11.807Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/market-data',
+  timestamp: '2025-08-25T13:26:18.701Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orders',
+  timestamp: '2025-08-25T13:26:25.932Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:27:24.469Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC',
+  timestamp: '2025-08-25T13:27:24.487Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/depth',
+  timestamp: '2025-08-25T13:27:24.510Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/trades',
+  timestamp: '2025-08-25T13:27:24.530Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/market-data',
+  timestamp: '2025-08-25T13:27:24.566Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orders',
+  timestamp: '2025-08-25T13:27:24.585Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:27:43.231Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1',
+  timestamp: '2025-08-25T13:27:43.244Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:27:43.245Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:27:43.285Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_2',
+  timestamp: '2025-08-25T13:27:43.246Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_3',
+  timestamp: '2025-08-25T13:27:43.247Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1',
+  timestamp: '2025-08-25T13:27:43.248Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_2',
+  timestamp: '2025-08-25T13:27:43.249Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_3',
+  timestamp: '2025-08-25T13:27:43.250Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: duplicate key value violates unique constraint "orders_pkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 187,
+      severity: 'ERROR',
+      code: '23505',
+      detail: 'Key (id)=(buy_1) already exists.',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_pkey',
+      file: 'nbtinsert.c',
+      line: '664',
+      routine: '_bt_check_unique'
+    },
+    promise: Promise {
+      <rejected> error: duplicate key value violates unique constraint "orders_pkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 187,
+        severity: 'ERROR',
+        code: '23505',
+        detail: 'Key (id)=(buy_1) already exists.',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_pkey',
+        file: 'nbtinsert.c',
+        line: '664',
+        routine: '_bt_check_unique'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:27:43.261Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:27:43.282Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'HTTP server closed',
+  timestamp: '2025-08-25T13:27:43.284Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket connections closed',
+  timestamp: '2025-08-25T13:27:43.286Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:27:43.246Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:27:43.247Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:27:43.248Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:27:43.249Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:27:43.250Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: duplicate key value violates unique constraint "orders_pkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 187,
+      severity: 'ERROR',
+      code: '23505',
+      detail: 'Key (id)=(buy_3) already exists.',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_pkey',
+      file: 'nbtinsert.c',
+      line: '664',
+      routine: '_bt_check_unique'
+    },
+    promise: Promise {
+      <rejected> error: duplicate key value violates unique constraint "orders_pkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 187,
+        severity: 'ERROR',
+        code: '23505',
+        detail: 'Key (id)=(buy_3) already exists.',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_pkey',
+        file: 'nbtinsert.c',
+        line: '664',
+        routine: '_bt_check_unique'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:27:43.328Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:27:43.332Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:28:16.041Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:28:16.088Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:28:16.089Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:28:16.090Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:28:16.089Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:28:16.090Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:28:16.092Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:28:16.092Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:28:16.092Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:28:16.093Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:28:23.210Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:28:23.232Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1',
+  timestamp: '2025-08-25T13:28:23.244Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:28:23.245Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_2',
+  timestamp: '2025-08-25T13:28:23.245Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_3',
+  timestamp: '2025-08-25T13:28:23.246Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1',
+  timestamp: '2025-08-25T13:28:23.246Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_2',
+  timestamp: '2025-08-25T13:28:23.247Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_3',
+  timestamp: '2025-08-25T13:28:23.248Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:28:23.246Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:28:23.246Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:28:23.247Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:28:23.247Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:28:23.248Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: duplicate key value violates unique constraint "orders_pkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 187,
+      severity: 'ERROR',
+      code: '23505',
+      detail: 'Key (id)=(buy_1) already exists.',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_pkey',
+      file: 'nbtinsert.c',
+      line: '664',
+      routine: '_bt_check_unique'
+    },
+    promise: Promise {
+      <rejected> error: duplicate key value violates unique constraint "orders_pkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 187,
+        severity: 'ERROR',
+        code: '23505',
+        detail: 'Key (id)=(buy_1) already exists.',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_pkey',
+        file: 'nbtinsert.c',
+        line: '664',
+        routine: '_bt_check_unique'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:28:23.257Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:28:23.279Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received unhandledRejection, starting graceful shutdown...',
+  timestamp: '2025-08-25T13:28:23.278Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'HTTP server closed',
+  timestamp: '2025-08-25T13:28:23.278Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket connections closed',
+  timestamp: '2025-08-25T13:28:23.279Z'
+}
+{
+  component: 'MatchingEngine',
+  error: {
+    reason: error: duplicate key value violates unique constraint "orders_pkey"
+        at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+        at processTicksAndRejections (node:internal/process/task_queues:105:5)
+        at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+      length: 187,
+      severity: 'ERROR',
+      code: '23505',
+      detail: 'Key (id)=(buy_2) already exists.',
+      hint: undefined,
+      position: undefined,
+      internalPosition: undefined,
+      internalQuery: undefined,
+      where: undefined,
+      schema: 'public',
+      table: 'orders',
+      column: undefined,
+      dataType: undefined,
+      constraint: 'orders_pkey',
+      file: 'nbtinsert.c',
+      line: '664',
+      routine: '_bt_check_unique'
+    },
+    promise: Promise {
+      <rejected> error: duplicate key value violates unique constraint "orders_pkey"
+          at /workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/node_modules/pg-pool/index.js:45:11
+          at processTicksAndRejections (node:internal/process/task_queues:105:5)
+          at async DatabaseManager.saveOrder (/workspaces/DEX_CLOB_TEST/dex-clob-project/backend/matching-engine/src/database.ts:210:5) {
+        length: 187,
+        severity: 'ERROR',
+        code: '23505',
+        detail: 'Key (id)=(buy_2) already exists.',
+        hint: undefined,
+        position: undefined,
+        internalPosition: undefined,
+        internalQuery: undefined,
+        where: undefined,
+        schema: 'public',
+        table: 'orders',
+        column: undefined,
+        dataType: undefined,
+        constraint: 'orders_pkey',
+        file: 'nbtinsert.c',
+        line: '664',
+        routine: '_bt_check_unique'
+      }
+    }
+  },
+  level: 'error',
+  message: 'Unhandled Rejection:',
+  timestamp: '2025-08-25T13:28:23.310Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T13:28:23.314Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-25T13:29:27.384Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database tables initialized',
+  timestamp: '2025-08-25T13:29:27.428Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-25T13:29:27.429Z'
+}
+{
+  component: 'ContractManager',
+  level: 'info',
+  message: 'Contract event listeners started (mock mode)',
+  timestamp: '2025-08-25T13:29:27.430Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection established',
+  timestamp: '2025-08-25T13:29:27.429Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-25T13:29:27.430Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-25T13:29:27.432Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-25T13:29:27.432Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-25T13:29:27.432Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-25T13:29:27.433Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /health',
+  timestamp: '2025-08-25T13:29:37.515Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'POST /api/v1/dev/seed-orderbook',
+  timestamp: '2025-08-25T13:29:37.531Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1756128577541_1',
+  timestamp: '2025-08-25T13:29:37.542Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1756128577541_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:29:37.543Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1756128577541_2',
+  timestamp: '2025-08-25T13:29:37.544Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: buy_1756128577541_3',
+  timestamp: '2025-08-25T13:29:37.544Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1756128577541_1',
+  timestamp: '2025-08-25T13:29:37.545Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1756128577541_2',
+  timestamp: '2025-08-25T13:29:37.546Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Order added: sell_1756128577541_3',
+  timestamp: '2025-08-25T13:29:37.546Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1756128577541_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:29:37.544Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'buy_1756128577541_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:29:37.545Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1756128577541_1',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:29:37.545Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1756128577541_2',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:29:37.546Z'
+}
+{
+  component: 'ContractManager',
+  orderId: 'sell_1756128577541_3',
+  valid: false,
+  level: 'info',
+  message: 'Order validation result',
+  timestamp: '2025-08-25T13:29:37.546Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC',
+  timestamp: '2025-08-25T13:29:37.567Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/depth',
+  timestamp: '2025-08-25T13:29:37.602Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'curl/8.5.0',
+  level: 'info',
+  message: 'GET /api/v1/orderbook/ETH/USDC/trades',
+  timestamp: '2025-08-25T13:29:37.615Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGTERM, starting graceful shutdown...',
+  timestamp: '2025-08-25T14:38:12.766Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-25T14:38:12.786Z'
+}
+{
+  component: 'DatabaseManager',
+  level: 'info',
+  message: 'Database connection closed',
+  timestamp: '2025-08-25T14:38:12.800Z'
+}

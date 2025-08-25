@@ -43,12 +43,17 @@ export class APIRouter {
       this.router.post('/orders/validate', this.validateOrderOnChain.bind(this));
     }
 
+    // Development/testing routes
+    this.router.post('/dev/seed-orderbook', this.seedOrderbook.bind(this));
+
     // Trade routes
     this.router.get('/trades', this.getTrades.bind(this));
     this.router.get('/users/:userId/trades', this.getUserTrades.bind(this));
 
     // Orderbook routes
-    this.router.get('/orderbook/:pair', this.getOrderbook.bind(this));
+    this.router.get('/orderbook/:base/:quote', this.getOrderbook.bind(this));
+    this.router.get('/orderbook/:base/:quote/depth', this.getOrderbookDepth.bind(this));
+    this.router.get('/orderbook/:base/:quote/trades', this.getOrderbookTrades.bind(this));
 
     // Market data routes
     this.router.get('/market-data', this.getMarketData.bind(this));
@@ -268,12 +273,12 @@ export class APIRouter {
 
   private async getTrades(req: Request, res: Response): Promise<void> {
     try {
-      const { pair, limit = '50', offset = '0' } = req.query;
+      const { pair, limit = '50', page = '1' } = req.query;
       
       const trades = await this.databaseManager.getTrades(
-        String(pair),
+        pair ? String(pair) : undefined,
         parseInt(String(limit)),
-        parseInt(String(offset))
+        parseInt(String(page))
       );
 
       res.json({ trades });
@@ -307,7 +312,8 @@ export class APIRouter {
 
   private async getOrderbook(req: Request, res: Response): Promise<void> {
     try {
-      const { pair } = req.params;
+      const { base, quote } = req.params;
+      const pair = `${base}/${quote}`;
 
       if (!TRADING_PAIRS.includes(pair as any)) {
         res.status(400).json({
@@ -493,6 +499,241 @@ export class APIRouter {
       res.status(500).json({
         error: 'Internal Server Error',
         message: 'Failed to validate order on blockchain'
+      });
+    }
+  }
+
+  // New OrderBook endpoints
+  private async getOrderbookDepth(req: Request, res: Response): Promise<void> {
+    try {
+      const { base, quote } = req.params;
+      const pair = `${base}/${quote}`;
+      const depth = parseInt(req.query.depth as string) || 20; // Default 20 levels
+
+      if (!TRADING_PAIRS.includes(pair as any)) {
+        res.status(400).json({
+          error: 'Invalid trading pair',
+          message: `Supported pairs: ${TRADING_PAIRS.join(', ')}`,
+        });
+        return;
+      }
+
+      const orderbook = this.orderBookManager.getOrderBook(pair);
+
+      if (orderbook) {
+        // Limit depth to requested number of levels
+        const bids = orderbook.bids.slice(0, depth);
+        const asks = orderbook.asks.slice(0, depth);
+
+        res.json({
+          pair,
+          bids,
+          asks,
+          depth,
+          lastUpdate: orderbook.lastUpdate,
+        });
+      } else {
+        res.json({
+          pair,
+          bids: [],
+          asks: [],
+          depth,
+          lastUpdate: Date.now(),
+        });
+      }
+
+    } catch (error) {
+      this.logger.error('Error fetching orderbook depth:', error);
+      res.status(500).json({
+        error: 'Internal Server Error',
+        message: 'Failed to fetch orderbook depth',
+      });
+    }
+  }
+
+  private async getOrderbookTrades(req: Request, res: Response): Promise<void> {
+    try {
+      const { base, quote } = req.params;
+      const pair = `${base}/${quote}`;
+      const limit = parseInt(req.query.limit as string) || 50; // Default 50 trades
+
+      if (!TRADING_PAIRS.includes(pair as any)) {
+        res.status(400).json({
+          error: 'Invalid trading pair',
+          message: `Supported pairs: ${TRADING_PAIRS.join(', ')}`,
+        });
+        return;
+      }
+
+      // Get recent trades for this pair from database
+      const trades = await this.databaseManager.getTrades(
+        pair,
+        limit,
+        parseInt(req.query.page as string) || 1
+      );
+
+      res.json({
+        pair,
+        trades,
+        limit,
+      });
+
+    } catch (error) {
+      this.logger.error('Error fetching orderbook trades:', error);
+      res.status(500).json({
+        error: 'Internal Server Error',
+        message: 'Failed to fetch orderbook trades',
+      });
+    }
+  }
+
+  // Development/testing methods
+  private async seedOrderbook(req: Request, res: Response): Promise<void> {
+    try {
+      const pair = 'ETH/USDC';
+      
+      // First, create test users
+      const testUsers = [
+        'test_user_1', 'test_user_2', 'test_user_3', 
+        'test_user_4', 'test_user_5', 'test_user_6'
+      ];
+      
+      for (const userId of testUsers) {
+        await this.databaseManager.saveUser({
+          id: userId,
+          address: userId, // In real scenario, this would be actual wallet address
+          nonce: 0,
+          isActive: true,
+          createdAt: Date.now(),
+          lastActivity: Date.now()
+        });
+      }
+      
+      // Create sample buy orders (bids)
+      const timestamp = Date.now();
+      const buyOrders = [
+        {
+          id: `buy_${timestamp}_1`,
+          userId: 'test_user_1',
+          pair,
+          side: 'buy',
+          type: 'limit',
+          price: '2000',
+          amount: '1.5',
+          filled: '0',
+          remaining: '1.5',
+          status: 'pending',
+          timestamp: timestamp - 5000,
+          nonce: 1,
+          signature: 'test_signature_1',
+          chainId: 31337,
+        },
+        {
+          id: `buy_${timestamp}_2`,
+          userId: 'test_user_2',
+          pair,
+          side: 'buy',
+          type: 'limit',
+          price: '1999',
+          amount: '2.0',
+          filled: '0',
+          remaining: '2.0',
+          status: 'pending',
+          timestamp: timestamp - 4000,
+          nonce: 1,
+          signature: 'test_signature_2',
+          chainId: 31337,
+        },
+        {
+          id: `buy_${timestamp}_3`,
+          userId: 'test_user_3',
+          pair,
+          side: 'buy',
+          type: 'limit',
+          price: '1998',
+          amount: '0.5',
+          filled: '0',
+          remaining: '0.5',
+          status: 'pending',
+          timestamp: timestamp - 3000,
+          nonce: 1,
+          signature: 'test_signature_3',
+          chainId: 31337,
+        }
+      ];
+
+      // Create sample sell orders (asks)
+      const sellOrders = [
+        {
+          id: `sell_${timestamp}_1`,
+          userId: 'test_user_4',
+          pair,
+          side: 'sell',
+          type: 'limit',
+          price: '2002',
+          amount: '1.0',
+          filled: '0',
+          remaining: '1.0',
+          status: 'pending',
+          timestamp: timestamp - 2000,
+          nonce: 1,
+          signature: 'test_signature_4',
+          chainId: 31337,
+        },
+        {
+          id: `sell_${timestamp}_2`,
+          userId: 'test_user_5',
+          pair,
+          side: 'sell',
+          type: 'limit',
+          price: '2003',
+          amount: '2.5',
+          filled: '0',
+          remaining: '2.5',
+          status: 'pending',
+          timestamp: timestamp - 1000,
+          nonce: 1,
+          signature: 'test_signature_5',
+          chainId: 31337,
+        },
+        {
+          id: `sell_${timestamp}_3`,
+          userId: 'test_user_6',
+          pair,
+          side: 'sell',
+          type: 'limit',
+          price: '2004',
+          amount: '1.8',
+          filled: '0',
+          remaining: '1.8',
+          status: 'pending',
+          timestamp: timestamp,
+          nonce: 1,
+          signature: 'test_signature_6',
+          chainId: 31337,
+        }
+      ];
+
+      // Add orders to order book
+      const allOrders = [...buyOrders, ...sellOrders];
+      for (const order of allOrders) {
+        this.orderBookManager.addOrder(order as Order);
+      }
+
+      res.json({
+        success: true,
+        message: 'OrderBook seeded with sample data',
+        pair,
+        ordersAdded: allOrders.length,
+        buyOrders: buyOrders.length,
+        sellOrders: sellOrders.length,
+      });
+
+    } catch (error) {
+      this.logger.error('Error seeding orderbook:', error);
+      res.status(500).json({
+        error: 'Internal Server Error',
+        message: 'Failed to seed orderbook',
       });
     }
   }

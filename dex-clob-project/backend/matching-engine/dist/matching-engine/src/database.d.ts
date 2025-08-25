@@ -13,7 +13,7 @@ export declare class DatabaseManager {
     getOrder(orderId: string): Promise<Order | null>;
     getUserOrders(userId: string, limit?: number, offset?: number): Promise<Order[]>;
     saveTrade(trade: Trade): Promise<void>;
-    getTrades(pair?: string, limit?: number, offset?: number): Promise<Trade[]>;
+    getTrades(pair?: string, limit?: number, page?: number): Promise<Trade[]>;
     saveBatch(batch: Batch): Promise<void>;
     updateBatch(batchId: string, updates: Partial<Batch>): Promise<void>;
     private mapRowToOrder;
