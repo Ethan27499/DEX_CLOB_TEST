@@ -10,6 +10,8 @@
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "test": "jest",
     "test:watch": "jest --watch",
+    "test:security": "node test-simple.js",
+    "test:api": "node test-security.js",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write src/**/*.ts"
   },
