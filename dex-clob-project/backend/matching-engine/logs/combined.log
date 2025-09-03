@@ -11104,3 +11104,68 @@
   message: 'GET /dex-swap-ui.html',
   timestamp: '2025-08-29T16:34:50.605Z'
 }
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-09-03T13:58:07.525Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-09-03T13:58:07.518Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-09-03T13:58:07.525Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-09-03T13:58:07.545Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-09-03T13:58:07.545Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-09-03T13:58:07.525Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-09-03T13:58:07.545Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-09-03T13:58:07.546Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-09-03T13:58:28.047Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-09-03T13:58:28.051Z'
+}

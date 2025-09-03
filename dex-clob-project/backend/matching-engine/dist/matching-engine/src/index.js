@@ -18,8 +18,50 @@ const websocket_1 = require("./websocket");
 const routes_1 = require("./routes");
 const logger_1 = require("./logger");
 const contract_manager_mock_1 = require("./contract-manager-mock");
-const constants_1 = require("../../shared/constants");
 dotenv_1.default.config();
+const setupSecurity = () => [
+    (0, helmet_1.default)(),
+    (0, compression_1.default)()
+];
+const corsConfig = {
+    origin: "*",
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
+};
+const optionalAuth = (req, res, next) => {
+    next();
+};
+const ipRateLimit = (maxRequests, windowMs) => {
+    return (0, express_rate_limit_1.default)({
+        windowMs,
+        max: maxRequests,
+        message: 'IP rate limit exceeded'
+    });
+};
+const burstProtection = (short, long) => {
+    return (0, express_rate_limit_1.default)({
+        windowMs: short.window,
+        max: short.requests,
+        message: 'Burst protection triggered'
+    });
+};
+class SecurityMonitor {
+    constructor() {
+        this.alerts = [];
+    }
+    static getInstance() {
+        if (!SecurityMonitor.instance) {
+            SecurityMonitor.instance = new SecurityMonitor();
+        }
+        return SecurityMonitor.instance;
+    }
+    getRecentAlerts(minutes) {
+        return this.alerts.slice(-10);
+    }
+    addAlert(type, message, ip) {
+        this.alerts.push({ type, message, ip, timestamp: new Date() });
+    }
+}
 class MatchingEngineServer {
     constructor() {
         this.app = (0, express_1.default)();
@@ -81,23 +123,50 @@ class MatchingEngineServer {
         };
     }
     setupMiddleware() {
-        this.app.use((0, helmet_1.default)());
-        this.app.use((0, cors_1.default)());
-        this.app.use((0, compression_1.default)());
-        const limiter = (0, express_rate_limit_1.default)({
-            windowMs: constants_1.RATE_LIMITS.API_CALLS.windowMs,
-            max: constants_1.RATE_LIMITS.API_CALLS.max,
-            message: 'Too many requests from this IP',
-            standardHeaders: true,
-            legacyHeaders: false,
+        const securityMiddleware = setupSecurity();
+        securityMiddleware.forEach(middleware => {
+            this.app.use(middleware);
         });
-        this.app.use('/api/', limiter);
-        this.app.use(express_1.default.json({ limit: '10mb' }));
-        this.app.use(express_1.default.urlencoded({ extended: true }));
+        this.app.use((0, cors_1.default)(corsConfig));
+        this.app.use((0, compression_1.default)());
+        this.app.use('/api/public/', ipRateLimit(200, 60 * 1000));
+        this.app.use('/api/', burstProtection({ requests: 50, window: 10 * 1000 }, { requests: 1000, window: 60 * 1000 }));
+        this.app.use(express_1.default.json({
+            limit: '10mb',
+            verify: (req, res, buf) => {
+                req.rawBody = buf;
+            }
+        }));
+        this.app.use(express_1.default.urlencoded({ extended: true, limit: '10mb' }));
         this.app.use((req, res, next) => {
-            this.logger.info(`${req.method} ${req.path}`, {
-                ip: req.ip,
-                userAgent: req.get('User-Agent'),
+            const monitor = SecurityMonitor.getInstance();
+            const suspiciousHeaders = [
+                'x-forwarded-for',
+                'x-real-ip',
+                'x-cluster-client-ip'
+            ];
+            const hasMultipleIPs = suspiciousHeaders.some(header => req.headers[header] && req.headers[header] !== req.ip);
+            if (hasMultipleIPs) {
+                monitor.addAlert('WARNING', 'Multiple IP headers detected', req.ip || 'unknown');
+            }
+            next();
+        });
+        this.app.use((req, res, next) => {
+            const startTime = Date.now();
+            res.on('finish', () => {
+                const duration = Date.now() - startTime;
+                const logData = {
+                    method: req.method,
+                    url: req.originalUrl,
+                    statusCode: res.statusCode,
+                    duration: `${duration}ms`,
+                    ip: req.ip,
+                    userAgent: req.get('User-Agent'),
+                    userId: req.user?.id || 'anonymous',
+                    contentLength: res.get('Content-Length') || '0'
+                };
+                const logLevel = res.statusCode >= 400 ? 'warn' : 'info';
+                this.logger[logLevel](`${req.method} ${req.originalUrl}`, logData);
             });
             next();
         });
@@ -111,12 +180,32 @@ class MatchingEngineServer {
                 version: process.env.npm_package_version || '1.0.0',
             });
         });
+        this.app.get('/api/health', optionalAuth, (req, res) => {
+            const monitor = SecurityMonitor.getInstance();
+            const recentAlerts = monitor.getRecentAlerts(5);
+            res.json({
+                status: 'healthy',
+                timestamp: new Date().toISOString(),
+                uptime: process.uptime(),
+                version: process.env.npm_package_version || '1.0.0',
+                authenticated: !!req.user,
+                userId: req.user?.id || null,
+                securityAlerts: recentAlerts.length,
+                environment: process.env.NODE_ENV || 'development'
+            });
+        });
+        this.setupAuthRoutes();
+        this.setupSecureTradingRoutes();
+        this.setupPublicRoutes();
+        this.setupAdminRoutes();
         const apiRouter = new routes_1.APIRouter(this.orderBookManager, this.databaseManager, this.contractManager);
-        this.app.use('/api/v1', apiRouter.getRouter());
+        this.app.use('/api', optionalAuth, apiRouter.getRouter());
+        this.app.use('/api/v1', optionalAuth, apiRouter.getRouter());
         this.app.use('*', (req, res) => {
             res.status(404).json({
                 error: 'Not Found',
                 message: 'The requested resource was not found',
+                timestamp: new Date().toISOString()
             });
         });
         this.app.use((err, req, res, next) => {
@@ -126,6 +215,14 @@ class MatchingEngineServer {
                 message: 'An unexpected error occurred',
             });
         });
+    }
+    setupAuthRoutes() {
+    }
+    setupSecureTradingRoutes() {
+    }
+    setupPublicRoutes() {
+    }
+    setupAdminRoutes() {
     }
     setupEventHandlers() {
         this.orderBookManager.on('orderAdded', (order) => {

@@ -15,6 +15,10 @@ export declare class MatchingEngineServer {
     private getContractConfig;
     private setupMiddleware;
     private setupRoutes;
+    private setupAuthRoutes;
+    private setupSecureTradingRoutes;
+    private setupPublicRoutes;
+    private setupAdminRoutes;
     private setupEventHandlers;
     start(): Promise<void>;
     private gracefulShutdown;
