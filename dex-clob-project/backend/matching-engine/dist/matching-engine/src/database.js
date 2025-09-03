@@ -141,6 +141,16 @@ class DatabaseManager {
             client.release();
         }
     }
+    async createUser(user) {
+        const newUser = {
+            id: `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            ...user,
+            createdAt: Date.now(),
+            lastActivity: Date.now()
+        };
+        await this.saveUser(newUser);
+        return newUser;
+    }
     async saveUser(user) {
         const query = `
       INSERT INTO users (id, address, nonce, is_active, created_at, last_activity)
@@ -149,15 +159,43 @@ class DatabaseManager {
         nonce = EXCLUDED.nonce,
         is_active = EXCLUDED.is_active,
         last_activity = EXCLUDED.last_activity
+      RETURNING *
     `;
-        await this.pool.query(query, [
+        const result = await this.pool.query(query, [
             user.id,
             user.address,
-            user.nonce,
-            user.isActive,
-            user.createdAt,
-            user.lastActivity,
+            user.nonce || 0,
+            user.isActive !== false,
+            user.createdAt || Date.now(),
+            user.lastActivity || Date.now(),
         ]);
+        const row = result.rows[0];
+        return {
+            id: row.id,
+            address: row.address,
+            nonce: row.nonce,
+            isActive: row.is_active,
+            createdAt: row.created_at,
+            lastActivity: row.last_activity,
+        };
+    }
+    async getUserByAddress(address) {
+        const query = 'SELECT * FROM users WHERE address = $1';
+        const result = await this.pool.query(query, [address]);
+        if (result.rows.length === 0)
+            return null;
+        const row = result.rows[0];
+        return {
+            id: row.id,
+            address: row.address,
+            nonce: row.nonce,
+            isActive: row.is_active,
+            createdAt: row.created_at,
+            lastActivity: row.last_activity,
+        };
+    }
+    async getUserById(id) {
+        return this.getUser(id);
     }
     async getUser(userId) {
         const query = 'SELECT * FROM users WHERE id = $1';
@@ -222,6 +260,41 @@ class DatabaseManager {
             return null;
         return this.mapRowToOrder(result.rows[0]);
     }
+    async getOrderById(orderId) {
+        return this.getOrder(orderId);
+    }
+    async getOrdersByUser(userId) {
+        const query = `
+      SELECT * FROM orders 
+      WHERE user_id = $1 
+      ORDER BY timestamp DESC
+    `;
+        const result = await this.pool.query(query, [userId]);
+        return result.rows.map((row) => this.mapRowToOrder(row));
+    }
+    async getOrdersByPair(pair) {
+        const query = `
+      SELECT * FROM orders 
+      WHERE pair = $1 AND status IN ('pending', 'partial')
+      ORDER BY timestamp DESC
+    `;
+        const result = await this.pool.query(query, [pair]);
+        return result.rows.map((row) => this.mapRowToOrder(row));
+    }
+    async updateOrderStatus(orderId, status, filledAmount) {
+        let query = `
+      UPDATE orders SET
+        status = $2,
+        updated_at = CURRENT_TIMESTAMP
+    `;
+        let params = [orderId, status];
+        if (filledAmount) {
+            query += `, filled = $3`;
+            params.push(filledAmount);
+        }
+        query += ` WHERE id = $1`;
+        await this.pool.query(query, params);
+    }
     async getUserOrders(userId, limit = 50, offset = 0) {
         const query = `
       SELECT * FROM orders 
@@ -266,6 +339,76 @@ class DatabaseManager {
         params.push(limit, offset);
         const result = await this.pool.query(query, params);
         return result.rows.map((row) => this.mapRowToTrade(row));
+    }
+    async getTradesByPair(pair, limit = 50) {
+        const query = `
+      SELECT * FROM trades 
+      WHERE pair = $1 
+      ORDER BY timestamp DESC 
+      LIMIT $2
+    `;
+        const result = await this.pool.query(query, [pair, limit]);
+        return result.rows.map((row) => this.mapRowToTrade(row));
+    }
+    async getTradesByUser(userId) {
+        const query = `
+      SELECT t.* FROM trades t
+      JOIN orders o ON (t.order_id = o.id OR t.counter_order_id = o.id)
+      WHERE o.user_id = $1
+      ORDER BY t.timestamp DESC
+    `;
+        const result = await this.pool.query(query, [userId]);
+        return result.rows.map((row) => this.mapRowToTrade(row));
+    }
+    async createBatch() {
+        const batchId = `batch_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        const query = `
+      INSERT INTO batches (id, status, chain_id, created_at, trade_count)
+      VALUES ($1, 'pending', 31337, $2, 0)
+      RETURNING id
+    `;
+        const result = await this.pool.query(query, [batchId, Date.now()]);
+        return result.rows[0].id;
+    }
+    async addTradeToBatch(batchId, tradeId) {
+        const client = await this.pool.connect();
+        try {
+            await client.query('BEGIN');
+            await client.query('INSERT INTO batch_trades (batch_id, trade_id) VALUES ($1, $2)', [batchId, tradeId]);
+            await client.query('UPDATE batches SET trade_count = trade_count + 1 WHERE id = $1', [batchId]);
+            await client.query('COMMIT');
+        }
+        catch (error) {
+            await client.query('ROLLBACK');
+            throw error;
+        }
+        finally {
+            client.release();
+        }
+    }
+    async settleBatch(batchId, txHash) {
+        const query = `
+      UPDATE batches SET 
+        status = 'confirmed',
+        tx_hash = $2,
+        confirmed_at = $3
+      WHERE id = $1
+    `;
+        await this.pool.query(query, [batchId, txHash, Date.now()]);
+    }
+    async getPendingBatches() {
+        const query = `
+      SELECT b.*, 
+             array_agg(t.*) as trades
+      FROM batches b
+      LEFT JOIN batch_trades bt ON b.id = bt.batch_id
+      LEFT JOIN trades t ON bt.trade_id = t.id
+      WHERE b.status = 'pending'
+      GROUP BY b.id
+      ORDER BY b.created_at ASC
+    `;
+        const result = await this.pool.query(query);
+        return result.rows.map((row) => this.mapRowToBatch(row));
     }
     async saveBatch(batch) {
         const client = await this.pool.connect();
@@ -353,6 +496,79 @@ class DatabaseManager {
             blockNumber: row.block_number ? parseInt(row.block_number) : undefined,
             txHash: row.tx_hash,
             chainId: row.chain_id,
+        };
+    }
+    async getMarketData() {
+        const query = `
+      SELECT 
+        pair,
+        COUNT(*) as trades_24h,
+        SUM(CAST(amount AS DECIMAL)) as volume_24h,
+        AVG(CAST(price AS DECIMAL)) as avg_price,
+        MAX(CAST(price AS DECIMAL)) as high_24h,
+        MIN(CAST(price AS DECIMAL)) as low_24h,
+        (SELECT price FROM trades WHERE pair = t.pair ORDER BY timestamp DESC LIMIT 1) as last_price
+      FROM trades t
+      WHERE timestamp > (EXTRACT(EPOCH FROM NOW()) * 1000 - 86400000)
+      GROUP BY pair
+      UNION ALL
+      SELECT 
+        'ETH/USDC' as pair, 0 as trades_24h, 0 as volume_24h, 1000 as avg_price, 1000 as high_24h, 1000 as low_24h, '1000.00' as last_price
+      WHERE NOT EXISTS (SELECT 1 FROM trades WHERE pair = 'ETH/USDC')
+    `;
+        const result = await this.pool.query(query);
+        return result.rows.map(row => ({
+            pair: row.pair,
+            lastPrice: row.last_price?.toString() || '1000.00',
+            priceChange24h: '0.0',
+            volume24h: row.volume_24h?.toString() || '0',
+            high24h: row.high_24h?.toString() || '1000.00',
+            low24h: row.low_24h?.toString() || '1000.00',
+            trades24h: parseInt(row.trades_24h) || 0,
+            timestamp: new Date().toISOString()
+        }));
+    }
+    async healthCheck() {
+        try {
+            const client = await this.pool.connect();
+            await client.query('SELECT NOW()');
+            client.release();
+            const userCountResult = await this.pool.query('SELECT COUNT(*) FROM users');
+            const orderCountResult = await this.pool.query('SELECT COUNT(*) FROM orders');
+            const tradeCountResult = await this.pool.query('SELECT COUNT(*) FROM trades');
+            const batchCountResult = await this.pool.query('SELECT COUNT(*) FROM batches');
+            return {
+                status: 'healthy',
+                recordCounts: {
+                    users: parseInt(userCountResult.rows[0].count),
+                    orders: parseInt(orderCountResult.rows[0].count),
+                    trades: parseInt(tradeCountResult.rows[0].count),
+                    batches: parseInt(batchCountResult.rows[0].count)
+                }
+            };
+        }
+        catch (error) {
+            return {
+                status: 'unhealthy',
+                recordCounts: {
+                    error: error.message
+                }
+            };
+        }
+    }
+    mapRowToBatch(row) {
+        return {
+            id: row.id,
+            trades: row.trades ? row.trades.filter((t) => t.id).map((t) => this.mapRowToTrade(t)) : [],
+            status: row.status,
+            chainId: row.chain_id,
+            txHash: row.tx_hash,
+            blockNumber: row.block_number ? parseInt(row.block_number) : undefined,
+            createdAt: parseInt(row.created_at),
+            submittedAt: row.submitted_at ? parseInt(row.submitted_at) : undefined,
+            confirmedAt: row.confirmed_at ? parseInt(row.confirmed_at) : undefined,
+            gasUsed: row.gas_used,
+            gasPrice: row.gas_price,
         };
     }
     camelToSnake(str) {

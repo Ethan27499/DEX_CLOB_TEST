@@ -2,8 +2,9 @@ import { Router, Request, Response, NextFunction } from 'express';
 import rateLimit from 'express-rate-limit';
 import Joi from 'joi';
 import { OrderBookManager } from './orderbook';
-import { DatabaseManager } from './database';
+import { IDatabaseManager } from './database-interface';
 import { ContractManager } from './contract-manager';
+import { MockContractManager } from './contract-manager-mock';
 import { Order, Trade } from '../../shared/types';
 import { CryptoUtils, ValidationUtils } from '../../shared/utils';
 import { RATE_LIMITS, ORDER_STATUS, TRADING_PAIRS } from '../../shared/constants';
@@ -12,14 +13,14 @@ import { Logger } from './logger';
 export class APIRouter {
   private router: Router;
   private orderBookManager: OrderBookManager;
-  private databaseManager: DatabaseManager;
-  private contractManager?: ContractManager;
+  private databaseManager: IDatabaseManager;
+  private contractManager?: ContractManager | MockContractManager;
   private logger: Logger;
 
   constructor(
     orderBookManager: OrderBookManager, 
-    databaseManager: DatabaseManager,
-    contractManager?: ContractManager
+    databaseManager: IDatabaseManager,
+    contractManager?: ContractManager | MockContractManager
   ) {
     this.router = Router();
     this.orderBookManager = orderBookManager;
@@ -229,8 +230,7 @@ export class APIRouter {
       if (userId) {
         const orders = await this.databaseManager.getUserOrders(
           String(userId),
-          parseInt(String(limit)),
-          parseInt(String(offset))
+          parseInt(String(limit))
         );
         res.json({ orders });
       } else {
@@ -277,8 +277,7 @@ export class APIRouter {
       
       const trades = await this.databaseManager.getTrades(
         pair ? String(pair) : undefined,
-        parseInt(String(limit)),
-        parseInt(String(page))
+        parseInt(String(limit))
       );
 
       res.json({ trades });
@@ -568,8 +567,7 @@ export class APIRouter {
       // Get recent trades for this pair from database
       const trades = await this.databaseManager.getTrades(
         pair,
-        limit,
-        parseInt(req.query.page as string) || 1
+        limit
       );
 
       res.json({

@@ -11,6 +11,7 @@ export declare class MatchingEngineServer {
     private logger;
     constructor();
     private isBlockchainEnabled;
+    private isDatabaseEnabled;
     private getContractConfig;
     private setupMiddleware;
     private setupRoutes;

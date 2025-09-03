@@ -3570,3 +3570,663 @@
   message: 'Unhandled Rejection:',
   timestamp: '2025-08-25T13:28:23.310Z'
 }
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:200:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:50:05.482Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:200:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:50:05.490Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:201:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:50:56.000Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:201:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:50:56.006Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:51:20.554Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:51:20.562Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:51:40.208Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:51:40.220Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:51:55.716Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:51:55.724Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:06.721Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:06.733Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:19.565Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:19.572Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:41.720Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:41.728Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:52.860Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:52.867Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:59.821Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:59.829Z'
+}

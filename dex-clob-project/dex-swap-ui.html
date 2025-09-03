@@ -1,0 +1,1992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEX Swap</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+
+        .tabs {
+            display: flex;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 4px;
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            flex: 1;
+            background: transparent;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            background: white;
+            color: #333;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+        }
+
+        .swap-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .swap-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .swap-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #000;
+        }
+
+        .settings-btn {
+            background: #f7f8fa;
+            border: none;
+            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.2s;
+        }
+
+        .settings-btn:hover {
+            background: #edeef2;
+        }
+
+        .token-input {
+            background: #f7f8fa;
+            border: 2px solid transparent;
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 8px;
+            transition: all 0.2s;
+        }
+
+        .token-input:hover {
+            border-color: #e0e0e0;
+        }
+
+        .token-input.focused {
+            border-color: #ff6b9d;
+            background: white;
+        }
+
+        .token-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .token-label {
+            font-size: 0.875rem;
+            color: #7780a0;
+            font-weight: 500;
+        }
+
+        .token-balance {
+            font-size: 0.875rem;
+            color: #7780a0;
+            cursor: pointer;
+        }
+
+        .token-balance:hover {
+            color: #ff6b9d;
+        }
+
+        .token-main {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .token-amount {
+            flex: 1;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #000;
+            outline: none;
+        }
+
+        .token-amount::placeholder {
+            color: #c0c0c0;
+        }
+
+        .token-select {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: white;
+            border: none;
+            border-radius: 12px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+            min-width: 100px;
+        }
+
+        .token-select:hover {
+            background: #f0f0f0;
+        }
+
+        .token-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.75rem;
+        }
+
+        .swap-arrow {
+            display: flex;
+            justify-content: center;
+            margin: 8px 0;
+            position: relative;
+        }
+
+        .swap-arrow-btn {
+            background: #f7f8fa;
+            border: 4px solid white;
+            border-radius: 12px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all 0.2s;
+            color: #7780a0;
+        }
+
+        .swap-arrow-btn:hover {
+            background: #edeef2;
+            transform: rotate(180deg);
+        }
+
+        .swap-info {
+            background: #f7f8fa;
+            border-radius: 12px;
+            padding: 12px;
+            margin: 16px 0;
+            font-size: 0.875rem;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+        }
+
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .info-label {
+            color: #7780a0;
+        }
+
+        .info-value {
+            color: #000;
+            font-weight: 500;
+        }
+
+        .swap-button {
+            width: 100%;
+            background: linear-gradient(45deg, #ff6b9d, #c44569);
+            color: white;
+            border: none;
+            border-radius: 16px;
+            padding: 16px;
+            font-size: 1.125rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            margin-top: 16px;
+        }
+
+        .swap-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(255, 107, 157, 0.4);
+        }
+
+        .swap-button:disabled {
+            background: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .wallet-info {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 16px;
+            padding: 16px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .wallet-address {
+            font-family: 'Courier New', monospace;
+            font-size: 0.875rem;
+            color: #666;
+            word-break: break-all;
+            margin-bottom: 8px;
+        }
+
+        .connect-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .connect-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .status-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 20px;
+            padding: 8px 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .status-indicator.connected {
+            color: #27ae60;
+        }
+
+        .status-indicator.disconnected {
+            color: #e74c3c;
+        }
+
+        .price-impact {
+            color: #f39c12;
+        }
+
+        .price-impact.high {
+            color: #e74c3c;
+        }
+
+        .slippage-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 8px 12px;
+            margin: 8px 0;
+            font-size: 0.875rem;
+            color: #856404;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid #ff6b9d;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 12px;
+            padding: 16px 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            font-weight: 500;
+            min-width: 300px;
+            text-align: center;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        .notification.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .notification.success {
+            border-left: 4px solid #27ae60;
+            color: #27ae60;
+        }
+
+        .notification.error {
+            border-left: 4px solid #e74c3c;
+            color: #e74c3c;
+        }
+
+        /* Multi-Swap Styles */
+        .multi-swap-toggle {
+            margin-top: 15px;
+        }
+
+        .multi-swap-toggle label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #7780a0;
+            cursor: pointer;
+        }
+
+        .multi-swap-toggle input[type="checkbox"] {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .multi-outputs {
+            margin-top: 15px;
+        }
+
+        .multi-outputs .title {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #7780a0;
+            font-weight: 500;
+        }
+
+        .output-tokens-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 8px;
+        }
+
+        .output-token-btn {
+            background: #f7f8fa;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 8px 6px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .output-token-btn:hover {
+            border-color: #e0e0e0;
+            background: white;
+        }
+
+        .output-token-btn.active {
+            border-color: #ff6b9d;
+            background: white;
+            color: #ff6b9d;
+        }
+
+        .output-token-btn .token-icon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #ff6b9d;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .output-token-btn.active .token-icon {
+            background: #ff6b9d;
+        }
+
+        .multi-outputs .hint {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        /* Orbital Pool Indicator */
+        .orbital-indicator {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+                max-width: 100%;
+            }
+            
+            .swap-card {
+                padding: 20px;
+            }
+        }
+
+        /* Transaction Dashboard Styles */
+        .card-header {
+            margin-bottom: 20px;
+        }
+
+        .transaction-stats {
+            font-size: 0.9rem;
+            color: #7780a0;
+            margin-top: 4px;
+        }
+
+        .transaction-filters {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: #f7f8fa;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            padding: 6px 12px;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #7780a0;
+        }
+
+        .filter-btn:hover {
+            background: #e9ecef;
+        }
+
+        .filter-btn.active {
+            background: #ff6b9d;
+            color: white;
+            border-color: #ff6b9d;
+        }
+
+        .transaction-list {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+
+        .transaction-item {
+            background: #f7f8fa;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-left: 4px solid #27ae60;
+        }
+
+        .transaction-item.failed {
+            border-left-color: #e74c3c;
+        }
+
+        .transaction-item.pending {
+            border-left-color: #f39c12;
+        }
+
+        .transaction-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .transaction-type {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .transaction-status {
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .transaction-status.success {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .transaction-status.failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .transaction-status.pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .transaction-details {
+            font-size: 0.875rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .transaction-amount {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .transaction-time {
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 8px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px 20px;
+            color: #7780a0;
+        }
+
+        .empty-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .empty-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .empty-description {
+            font-size: 0.9rem;
+        }
+
+        .refresh-button {
+            width: 100%;
+            background: #f7f8fa;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            padding: 12px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #666;
+            transition: all 0.2s;
+        }
+
+        .refresh-button:hover {
+            background: #e9ecef;
+            border-color: #dee2e6;
+        }
+    </style>
+</head>
+<body>
+    <div class="status-indicator" id="statusIndicator">🔴 Disconnected</div>
+    <div class="notification" id="notification"></div>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">🌟 DEX Platform</div>
+            <div class="subtitle">Swap & Add Liquidity</div>
+        </div>
+
+        <div class="wallet-info" id="walletInfo">
+            <div class="wallet-address" id="walletAddress">Connect your wallet to start trading</div>
+            <button class="connect-btn" onclick="connectWallet()">Connect Wallet</button>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="tabs">
+            <button class="tab active" onclick="switchTab('swap')">Swap</button>
+            <button class="tab" onclick="switchTab('liquidity')">Add Liquidity</button>
+            <button class="tab" onclick="switchTab('transactions')">Transactions</button>
+        </div>
+
+        <!-- Swap Card -->
+        <div class="swap-card" id="swapCard">
+            <div class="swap-header">
+                <div class="swap-title">Swap</div>
+                <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+            </div>
+
+            <!-- From Token -->
+            <div class="token-input" id="fromToken">
+                <div class="token-header">
+                    <div class="token-label">From</div>
+                    <div class="token-balance" onclick="setMaxAmount()">Balance: <span id="fromBalance">0.0</span></div>
+                </div>
+                <div class="token-main">
+                    <input type="number" class="token-amount" id="fromAmount" placeholder="0.0" oninput="calculateSwap()">
+                    <button class="token-select" onclick="selectToken('from')">
+                        <div class="token-icon">E</div>
+                        <span>ETH</span>
+                        <span>▼</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Swap Arrow -->
+            <div class="swap-arrow">
+                <button class="swap-arrow-btn" onclick="swapTokens()">↓</button>
+            </div>
+
+            <!-- To Token -->
+            <div class="token-input" id="toToken">
+                <div class="token-header">
+                    <div class="token-label">To</div>
+                    <div class="token-balance">Balance: <span id="toBalance">0.0</span></div>
+                </div>
+                <div class="token-main">
+                    <input type="number" class="token-amount" id="toAmount" placeholder="0.0" readonly>
+                    <button class="token-select" onclick="selectToken('to')">
+                        <div class="token-icon">U</div>
+                        <span>USDC</span>
+                        <span>▼</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Swap Info -->
+            <div class="swap-info" id="swapInfo" style="display: none;">
+                <div class="info-row">
+                    <span class="info-label">Rate</span>
+                    <span class="info-value" id="swapRate">1 ETH = 2000 USDC</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Price Impact</span>
+                    <span class="info-value price-impact" id="priceImpact">< 0.01%</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Fee</span>
+                    <span class="info-value" id="swapFee">0.3%</span>
+                </div>
+            </div>
+
+            <!-- Slippage Warning -->
+            <div class="slippage-warning" id="slippageWarning" style="display: none;">
+                ⚠️ High price impact! Consider reducing your trade size.
+            </div>
+
+            <!-- Swap Button -->
+            <button class="swap-button" id="swapButton" onclick="executeSwap()" disabled>
+                Enter an amount
+            </button>
+
+            <!-- Multi-Swap Mode Toggle -->
+            <div class="multi-swap-toggle">
+                <label>
+                    <input type="checkbox" id="multiSwapMode" onchange="toggleMultiSwap()">
+                    <span>🚀 Multi-Token Swap (A → B + C + D)</span>
+                </label>
+            </div>
+
+            <!-- Multi-Output Tokens (Hidden by default) -->
+            <div class="multi-outputs" id="multiOutputs" style="display: none;">
+                <div class="title">
+                    Output Tokens:
+                </div>
+                <div class="output-tokens-grid">
+                    <button class="output-token-btn active" data-token="USDC" onclick="toggleOutputToken('USDC')">
+                        <span class="token-icon">U</span> USDC
+                    </button>
+                    <button class="output-token-btn" data-token="BTC" onclick="toggleOutputToken('BTC')">
+                        <span class="token-icon">B</span> BTC
+                    </button>
+                    <button class="output-token-btn" data-token="MATIC" onclick="toggleOutputToken('MATIC')">
+                        <span class="token-icon">M</span> MATIC
+                    </button>
+                    <button class="output-token-btn" data-token="WETH" onclick="toggleOutputToken('WETH')">
+                        <span class="token-icon">W</span> WETH
+                    </button>
+                </div>
+                <div class="hint">
+                    💡 Your input will be split optimally across selected outputs
+                </div>
+            </div>
+        </div>
+
+        <!-- Liquidity Card -->
+        <div class="swap-card" id="liquidityCard" style="display: none;">
+            <div class="swap-header">
+                <div class="swap-title">Add Liquidity <span class="orbital-indicator">🛸 ORBITAL AMM</span></div>
+                <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+            </div>
+
+            <!-- Pool Selection -->
+            <div style="margin-bottom: 20px;">
+                <label style="font-size: 0.9rem; color: #7780a0; font-weight: 500; margin-bottom: 8px; display: block;">
+                    Select Orbital Pool:
+                </label>
+                <select id="poolSelector" onchange="selectOrbitalPool()" style="width: 100%; padding: 12px; border: 2px solid #f0f0f0; border-radius: 12px; font-size: 1rem;">
+                    <option value="STABLE_POOL">🏦 Stable Pool (USDC/USDT/DAI) - 0.03% fee</option>
+                    <option value="ETH_POOL">⟠ ETH Pool (ETH/WETH/stETH) - 0.03% fee</option>
+                    <option value="BTC_POOL">₿ BTC Pool (BTC/WBTC/tBTC) - 0.03% fee</option>
+                </select>
+            </div>
+
+            <!-- Pool Info Display -->
+            <div style="background: #f7f8fa; border-radius: 12px; padding: 16px; margin-bottom: 20px; font-size: 0.9rem;">
+                <div id="poolInfoDisplay">
+                    <div style="font-weight: 600; color: #333; margin-bottom: 8px;">🏦 Stable Pool</div>
+                    <div style="color: #666; margin-bottom: 4px;">Tokens: USDC, USDT, DAI</div>
+                    <div style="color: #666; margin-bottom: 4px;">Total Liquidity: $300,000</div>
+                    <div style="color: #666; margin-bottom: 4px;">Amplification: 1000x (Ultra-stable)</div>
+                    <div style="color: #666;">Depeg Protection: ±1%</div>
+                </div>
+            </div>
+
+            <!-- Token A Input -->
+            <div class="token-input">
+                <div class="token-header">
+                    <div class="token-label">Token A</div>
+                    <div class="token-balance">Balance: <span id="tokenABalance">0.0</span></div>
+                </div>
+                <div class="token-main">
+                    <input type="number" class="token-amount" id="tokenAAmount" placeholder="0.0" oninput="calculateLP()">
+                    <button class="token-select" onclick="selectLPToken('tokenA')">
+                        <div class="token-icon">E</div>
+                        <span>ETH</span>
+                        <span>▼</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Plus Icon -->
+            <div class="swap-arrow">
+                <div class="swap-arrow-btn">+</div>
+            </div>
+
+            <!-- Token B Input -->
+            <div class="token-input">
+                <div class="token-header">
+                    <div class="token-label">Token B</div>
+                    <div class="token-balance">Balance: <span id="tokenBBalance">0.0</span></div>
+                </div>
+                <div class="token-main">
+                    <input type="number" class="token-amount" id="tokenBAmount" placeholder="0.0" oninput="calculateLP()">
+                    <button class="token-select" onclick="selectLPToken('tokenB')">
+                        <div class="token-icon">U</div>
+                        <span>USDC</span>
+                        <span>▼</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- LP Info -->
+            <div class="swap-info" id="lpInfo" style="display: none;">
+                <div class="info-row">
+                    <span class="info-label">Pool Share</span>
+                    <span class="info-value" id="poolShare">0%</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Rate</span>
+                    <span class="info-value" id="lpRate">-</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Estimated APY</span>
+                    <span class="info-value" id="estimatedAPY">12.5%</span>
+                </div>
+            </div>
+
+            <!-- Add Liquidity Button -->
+            <button class="swap-button" id="addLPButton" onclick="addLiquidity()" disabled>
+                Enter amounts
+            </button>
+        </div>
+
+        <!-- Transactions Card -->
+        <div class="swap-card" id="transactionsCard" style="display: none;">
+            <div class="card-header">
+                <div class="swap-title">Transaction History 📊</div>
+                <div class="transaction-stats">
+                    <span id="totalTxs">0 transactions</span> • 
+                    <span id="successRate">100% success</span>
+                </div>
+            </div>
+
+            <!-- Transaction Filters -->
+            <div class="transaction-filters">
+                <button class="filter-btn active" onclick="filterTransactions('all')">All</button>
+                <button class="filter-btn" onclick="filterTransactions('swap')">Swaps</button>
+                <button class="filter-btn" onclick="filterTransactions('multi_swap')">Multi-Swaps</button>
+                <button class="filter-btn" onclick="filterTransactions('liquidity')">Liquidity</button>
+                <button class="filter-btn" onclick="filterTransactions('failed')">Failed</button>
+            </div>
+
+            <!-- Transaction List -->
+            <div class="transaction-list" id="transactionList">
+                <div class="empty-state">
+                    <div class="empty-icon">📊</div>
+                    <div class="empty-title">No transactions yet</div>
+                    <div class="empty-description">Your transaction history will appear here</div>
+                </div>
+            </div>
+
+            <!-- Refresh Button -->
+            <button class="refresh-button" onclick="refreshTransactions()">
+                🔄 Refresh Transactions
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Global state
+        let wallet = null;
+        let currentUser = null;
+        let ws = null;
+        let isConnected = false;
+        
+        // Transaction Management
+        let transactionHistory = [];
+        let currentFilter = 'all';
+        
+        // Helper function to record transactions
+        function recordTransaction(type, status, fromToken, toToken, amount, fee) {
+            const newTransaction = {
+                id: `tx_${Date.now()}`,
+                type: type,
+                status: status,
+                fromToken: fromToken,
+                toToken: toToken,
+                amount: amount,
+                fee: fee,
+                timestamp: Date.now(),
+                hash: '0x' + Math.random().toString(16).substr(2, 8) + '...',
+                poolInfo: currentOrbitalPool ? '🛸 Orbital AMM' : 'Regular DEX'
+            };
+            
+            transactionHistory.unshift(newTransaction);
+            
+            // Update UI if transactions tab is active
+            if (currentTab === 'transactions') {
+                renderTransactionList();
+                updateTransactionStats();
+            }
+        }
+        
+        const API_BASE = 'http://localhost:3002/api';
+        const tokens = {
+            'ETH': { symbol: 'ETH', name: 'Ethereum', icon: 'E', balance: '0.0', price: 0 },
+            'USDC': { symbol: 'USDC', name: 'USD Coin', icon: 'U', balance: '0.0', price: 1 },
+            'BTC': { symbol: 'BTC', name: 'Bitcoin', icon: 'B', balance: '0.0', price: 0 },
+            'MATIC': { symbol: 'MATIC', name: 'Polygon', icon: 'M', balance: '0.0', price: 0 },
+            'WETH': { symbol: 'WETH', name: 'Wrapped ETH', icon: 'W', balance: '0.0', price: 0 },
+            'stETH': { symbol: 'stETH', name: 'Staked ETH', icon: 'S', balance: '0.0', price: 0 },
+            'WBTC': { symbol: 'WBTC', name: 'Wrapped BTC', icon: '₿', balance: '0.0', price: 0 },
+            'tBTC': { symbol: 'tBTC', name: 'Threshold BTC', icon: 'T', balance: '0.0', price: 0 },
+            'USDT': { symbol: 'USDT', name: 'Tether USD', icon: 'T', balance: '0.0', price: 1 },
+            'DAI': { symbol: 'DAI', name: 'MakerDAO', icon: 'D', balance: '0.0', price: 1 }
+        };
+
+        let marketData = {
+            'ETH/USDC': { price: 2000, volume24h: 0, change24h: 0, depegThreshold: 2 },
+            'BTC/USDC': { price: 50000, volume24h: 0, change24h: 0, depegThreshold: 2 },
+            'MATIC/USDC': { price: 0.8, volume24h: 0, change24h: 0, depegThreshold: 2 },
+            'ETH/BTC': { price: 0.04, volume24h: 0, change24h: 0, depegThreshold: 2 },
+            'MATIC/ETH': { price: 0.0004, volume24h: 0, change24h: 0, depegThreshold: 2 }
+        };
+
+        // Orbital AMM Pools with 3-token concentrated liquidity
+        let orbitalPools = {
+            'STABLE_POOL': {
+                tokens: ['USDC', 'USDT', 'DAI'],
+                reserves: [100000, 100000, 100000],
+                weights: [0.33, 0.33, 0.34],
+                amplification: 1000,
+                feeRate: 0.0003, // 0.03%
+                depegThreshold: 0.01, // 1% for stablecoins
+                totalSupply: 300000,
+                active: true
+            },
+            'ETH_POOL': {
+                tokens: ['ETH', 'WETH', 'stETH'],
+                reserves: [500, 500, 480],
+                weights: [0.4, 0.4, 0.2],
+                amplification: 500,
+                feeRate: 0.0003,
+                depegThreshold: 0.02, // 2% for ETH variants
+                totalSupply: 1480,
+                active: true
+            },
+            'BTC_POOL': {
+                tokens: ['BTC', 'WBTC', 'tBTC'],
+                reserves: [20, 20, 19],
+                weights: [0.4, 0.4, 0.2],
+                amplification: 300,
+                feeRate: 0.0003,
+                depegThreshold: 0.02,
+                totalSupply: 59,
+                active: true
+            }
+        };
+
+        let multiSwapMode = false;
+        let selectedOutputTokens = ['USDC']; // Default single output
+        
+        let selectedTokens = {
+            from: 'ETH',
+            to: 'USDC'
+        };
+
+        let lpTokens = {
+            tokenA: 'ETH',
+            tokenB: 'USDC'
+        };
+
+        let currentTab = 'swap';
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🚀 DEX App initializing...');
+            
+            // Clear any existing notifications
+            const notification = document.getElementById('notification');
+            if (notification) {
+                notification.className = 'notification';
+                notification.textContent = '';
+            }
+            
+            // Auto-connect wallet for better UX
+            connectWallet();
+            
+            checkServerConnection();
+            connectWebSocket();
+            
+            // Initialize swap calculations
+            setTimeout(() => {
+                calculateSwap();
+                updateBalances();
+                
+                // Force trigger calculation if input has value
+                const fromInput = document.getElementById('fromAmount');
+                if (fromInput && fromInput.value) {
+                    calculateSwap();
+                }
+            }, 500);
+            
+            // Check server connection every 5 seconds
+            setInterval(checkServerConnection, 5000);
+            
+            // Fetch market data every 30 seconds
+            setInterval(fetchMarketData, 30000);
+            
+            console.log('✅ App initialization complete');
+        });
+
+        // Wallet functions
+        function generateWallet() {
+            const privateKey = '0x' + Array(64).fill(0).map(() => Math.floor(Math.random() * 16).toString(16)).join('');
+            const address = '0x' + Array(40).fill(0).map(() => Math.floor(Math.random() * 16).toString(16)).join('');
+            return { privateKey, address };
+        }
+
+        function connectWallet() {
+            wallet = generateWallet();
+            isConnected = true; // Set connection status
+            
+            document.getElementById('walletAddress').textContent = `${wallet.address.slice(0, 6)}...${wallet.address.slice(-4)}`;
+            document.querySelector('.connect-btn').textContent = 'Connected ✓';
+            document.querySelector('.connect-btn').style.background = '#27ae60';
+            
+            // Set mock balances with new tokens
+            tokens.ETH.balance = '10.0';
+            tokens.USDC.balance = '25000.0';
+            tokens.BTC.balance = '0.5';
+            tokens.MATIC.balance = '1000.0';
+            tokens.WETH.balance = '10.0';
+            tokens.stETH.balance = '9.8';
+            tokens.WBTC.balance = '0.5';
+            tokens.tBTC.balance = '0.48';
+            tokens.USDT.balance = '25000.0';
+            tokens.DAI.balance = '25000.0';
+            
+            updateBalances();
+            updateTokenSelectors();
+            updateLPBalances();
+            updateLPTokenSelectors();
+            createUser();
+            showNotification('Wallet connected successfully!', 'success');
+        }
+
+        // Server communication
+        async function apiCall(endpoint, method = 'GET', data = null) {
+            try {
+                const options = {
+                    method,
+                    headers: { 'Content-Type': 'application/json' },
+                };
+                
+                if (data) {
+                    options.body = JSON.stringify(data);
+                }
+                
+                const response = await fetch(`${API_BASE}${endpoint}`, options);
+                const result = await response.json();
+                
+                if (!response.ok) {
+                    throw new Error(result.message || `HTTP ${response.status}`);
+                }
+                
+                return result;
+            } catch (error) {
+                console.error(`API Error (${endpoint}):`, error);
+                throw error;
+            }
+        }
+
+        async function checkServerConnection() {
+            try {
+                const healthData = await apiCall('/health');
+                console.log('✅ Server health check:', healthData);
+                
+                document.getElementById('statusIndicator').textContent = '🟢 Connected';
+                document.getElementById('statusIndicator').className = 'status-indicator connected';
+                
+                // Fetch real market data when server is connected
+                await fetchMarketData();
+                
+            } catch (error) {
+                console.log('❌ Server connection failed:', error.message);
+                document.getElementById('statusIndicator').textContent = '🔴 Disconnected';
+                document.getElementById('statusIndicator').className = 'status-indicator disconnected';
+            }
+        }
+
+        async function fetchMarketData() {
+            try {
+                console.log('📊 Fetching real market data...');
+                
+                // Fetch recent trades for price data
+                const trades = await apiCall('/trades?limit=50');
+                const orders = await apiCall('/orders?status=filled&limit=100');
+                
+                console.log('📈 Received data:', { 
+                    trades: trades?.length || 0, 
+                    orders: orders?.length || 0 
+                });
+                
+                // Update market data from recent trades
+                if (trades && trades.length > 0) {
+                    const priceUpdates = {};
+                    
+                    trades.forEach(trade => {
+                        const pair = trade.pair;
+                        const price = parseFloat(trade.price);
+                        const amount = parseFloat(trade.amount);
+                        
+                        if (marketData[pair]) {
+                            marketData[pair].price = price;
+                            marketData[pair].volume24h += amount;
+                            priceUpdates[pair] = price;
+                        }
+                    });
+                    
+                    console.log('💹 Price updates:', priceUpdates);
+                }
+                
+                // Update token prices from market data
+                tokens.ETH.price = marketData['ETH/USDC']?.price || 2000;
+                tokens.BTC.price = marketData['BTC/USDC']?.price || 50000;
+                tokens.MATIC.price = marketData['MATIC/USDC']?.price || 0.8;
+                
+                // Update UI with new prices
+                updateMarketPrices();
+                
+                console.log('✅ Market data updated successfully');
+                
+            } catch (error) {
+                console.warn('⚠️ Failed to fetch market data, using defaults:', error.message);
+                // Keep default prices if API fails
+            }
+        }
+
+        async function createUser() {
+            if (!wallet) return;
+            
+            try {
+                const userData = {
+                    address: wallet.address,
+                    nonce: 0,
+                    isActive: true
+                };
+                
+                currentUser = await apiCall('/users', 'POST', userData);
+                console.log('User created:', currentUser);
+                
+                // Update connection status when user is created successfully
+                isConnected = true;
+                
+            } catch (error) {
+                console.error('Failed to create user:', error);
+                // Don't set isConnected to false here as wallet can still work offline
+            }
+        }
+
+        // WebSocket connection
+        function connectWebSocket() {
+            try {
+                ws = new WebSocket('ws://localhost:3002');
+                
+                ws.onopen = function() {
+                    console.log('WebSocket connected');
+                };
+                
+                ws.onmessage = function(event) {
+                    const data = JSON.parse(event.data);
+                    console.log('📡 WebSocket message:', data);
+                    
+                    if (data.type === 'trade') {
+                        // Update market data with new trade
+                        if (data.pair && data.price) {
+                            if (marketData[data.pair]) {
+                                marketData[data.pair].price = parseFloat(data.price);
+                            }
+                            updateMarketPrices();
+                        }
+                    } else if (data.type === 'order') {
+                        console.log('📋 New order:', data);
+                    }
+                };
+                
+                ws.onclose = function() {
+                    console.log('WebSocket disconnected');
+                    setTimeout(connectWebSocket, 3000);
+                };
+            } catch (error) {
+                console.error('WebSocket error:', error);
+            }
+        }
+
+        async function executeSwap() {
+            console.log('🔄 executeSwap called, checking conditions...');
+            console.log('Wallet:', wallet ? 'Connected' : 'Not connected');
+            console.log('CurrentUser:', currentUser ? 'Created' : 'Not created');
+            
+            if (!wallet) {
+                console.warn('❌ Swap rejected: No wallet connected');
+                showNotification('Please connect wallet first', 'error');
+                return;
+            }
+            
+            const fromAmount = parseFloat(document.getElementById('fromAmount').value);
+            const toAmount = parseFloat(document.getElementById('toAmount').value);
+            
+            console.log('💰 Swap amounts:', { fromAmount, toAmount });
+            
+            if (fromAmount <= 0) {
+                showNotification('Invalid amount', 'error');
+                return;
+            }
+            
+            document.getElementById('swapButton').innerHTML = '<div class="loading"></div> Swapping...';
+            document.getElementById('swapButton').disabled = true;
+            
+            // Define variables at proper scope level
+            let actualFromAmount = fromAmount;
+            let actualToAmount = parseFloat(document.getElementById('toAmount').value);
+            let swapSuccessMessage = '';
+            
+            try {
+                // Try to record on server if available
+                try {
+                    if (currentUser) {
+                        if (multiSwapMode && selectedOutputTokens.length > 1) {
+                            // Multi-swap transaction
+                            const multiSwapOrder = {
+                                id: `multiswap_${Date.now()}`,
+                                userId: currentUser.id,
+                                type: 'multi_swap',
+                                fromToken: selectedTokens.from,
+                                fromAmount: fromAmount.toString(),
+                                outputTokens: selectedOutputTokens,
+                                swapType: 'orbital_amm',
+                                fee: (fromAmount * 0.0003).toString(),
+                                timestamp: Date.now(),
+                                nonce: Math.floor(Math.random() * 1000000),
+                                signature: '0x' + Array(128).fill(0).map(() => Math.floor(Math.random() * 16).toString(16)).join(''),
+                                chainId: 31337
+                            };
+                            
+                            await apiCall('/orders', 'POST', multiSwapOrder);
+                            console.log('🚀 Multi-swap order recorded on server');
+                            
+                            // Update balances for multi-swap
+                            const splits = selectedOutputTokens.length;
+                            const amountPerToken = fromAmount / splits;
+                            
+                            tokens[selectedTokens.from].balance = (parseFloat(tokens[selectedTokens.from].balance) - fromAmount).toString();
+                            
+                            selectedOutputTokens.forEach(outputToken => {
+                                let exchangeRate = 1;
+                                if (selectedTokens.from === 'ETH' && outputToken === 'USDC') exchangeRate = 2000;
+                                else if (selectedTokens.from === 'ETH' && outputToken === 'BTC') exchangeRate = 0.04;
+                                else if (selectedTokens.from === 'ETH' && outputToken === 'MATIC') exchangeRate = 2500;
+                                else if (selectedTokens.from === 'ETH' && outputToken === 'WETH') exchangeRate = 1;
+                                
+                                const outputAmount = (amountPerToken - (amountPerToken * 0.0003)) * exchangeRate;
+                                tokens[outputToken].balance = (parseFloat(tokens[outputToken].balance) + outputAmount).toString();
+                            });
+                            
+                            swapSuccessMessage = `🚀 Multi-swap successful! ${fromAmount} ${selectedTokens.from} → ${selectedOutputTokens.length} tokens`;
+                            
+                        } else {
+                            // Regular single swap
+                            const buyOrder = {
+                                id: `swap_buy_${Date.now()}`,
+                                userId: currentUser.id,
+                                pair: `${selectedTokens.from}/${selectedTokens.to}`,
+                                side: 'sell',
+                                type: 'market',
+                                price: '0',
+                                amount: fromAmount.toString(),
+                                filled: '0',
+                                remaining: fromAmount.toString(),
+                                status: 'pending',
+                                timestamp: Date.now(),
+                                nonce: Math.floor(Math.random() * 1000000),
+                                signature: '0x' + Array(128).fill(0).map(() => Math.floor(Math.random() * 16).toString(16)).join(''),
+                                chainId: 31337
+                            };
+                            
+                            await apiCall('/orders', 'POST', buyOrder);
+                            console.log('📝 Regular swap order recorded on server');
+                            
+                            // Update balances using the actual amounts displayed
+                            tokens[selectedTokens.from].balance = (parseFloat(tokens[selectedTokens.from].balance) - actualFromAmount).toString();
+                            tokens[selectedTokens.to].balance = (parseFloat(tokens[selectedTokens.to].balance) + actualToAmount).toString();
+                            
+                            swapSuccessMessage = `Successfully swapped ${actualFromAmount} ${selectedTokens.from} for ${actualToAmount.toFixed(6)} ${selectedTokens.to}`;
+                        }
+                        
+                    }
+                } catch (serverError) {
+                    console.log('⚠️ Server recording failed, continuing with local swap:', serverError.message);
+                    // For local fallback
+                    swapSuccessMessage = `Successfully swapped ${actualFromAmount} ${selectedTokens.from} for ${actualToAmount.toFixed(6)} ${selectedTokens.to}`;
+                }
+                
+                updateBalances();
+                
+                // Reset form
+                document.getElementById('fromAmount').value = '';
+                if (!multiSwapMode) {
+                    document.getElementById('toAmount').value = '';
+                }
+                document.getElementById('swapInfo').style.display = 'none';
+                
+                // Record transaction in history
+                const txType = multiSwapMode && selectedOutputTokens.length > 1 ? 'multi_swap' : 'swap';
+                const txToToken = multiSwapMode && selectedOutputTokens.length > 1 ? selectedOutputTokens.join(', ') : selectedTokens.to;
+                recordTransaction(txType, 'success', selectedTokens.from, txToToken, actualFromAmount, actualFromAmount * 0.0003);
+                
+                // Show success notification with the message that was set
+                if (swapSuccessMessage) {
+                    showNotification(swapSuccessMessage, 'success');
+                }
+                
+            } catch (error) {
+                showNotification(`Swap failed: ${error.message}`, 'error');
+            } finally {
+                document.getElementById('swapButton').textContent = 'Enter an amount';
+                document.getElementById('swapButton').disabled = true;
+            }
+        }
+
+        function swapTokens() {
+            const temp = selectedTokens.from;
+            selectedTokens.from = selectedTokens.to;
+            selectedTokens.to = temp;
+            
+            // Update UI
+            updateTokenSelectors();
+            
+            // Swap amounts
+            const fromAmount = document.getElementById('fromAmount').value;
+            const toAmount = document.getElementById('toAmount').value;
+            document.getElementById('fromAmount').value = toAmount;
+            document.getElementById('toAmount').value = fromAmount;
+            
+            calculateSwap();
+        }
+
+        function selectToken(position) {
+            // Simple token selection - cycle through available tokens
+            const tokenList = Object.keys(tokens);
+            const currentIndex = tokenList.indexOf(selectedTokens[position]);
+            const nextIndex = (currentIndex + 1) % tokenList.length;
+            
+            selectedTokens[position] = tokenList[nextIndex];
+            updateTokenSelectors();
+            updateBalances();
+            calculateSwap();
+        }
+
+        function updateTokenSelectors() {
+            // Update from token
+            const fromToken = tokens[selectedTokens.from];
+            document.querySelector('#fromToken .token-icon').textContent = fromToken.icon;
+            document.querySelector('#fromToken .token-select span').textContent = fromToken.symbol;
+            
+            // Update to token
+            const toToken = tokens[selectedTokens.to];
+            document.querySelector('#toToken .token-icon').textContent = toToken.icon;
+            document.querySelector('#toToken .token-select span').textContent = toToken.symbol;
+        }
+
+        function updateBalances() {
+            document.getElementById('fromBalance').textContent = tokens[selectedTokens.from].balance;
+            document.getElementById('toBalance').textContent = tokens[selectedTokens.to].balance;
+        }
+
+        function setMaxAmount() {
+            const maxBalance = parseFloat(tokens[selectedTokens.from].balance);
+            document.getElementById('fromAmount').value = maxBalance;
+            calculateSwap();
+        }
+
+        function updateMarketPrices() {
+            // Recalculate swap with new market data
+            calculateSwap();
+            calculateLP();
+            console.log('💹 Market prices updated');
+        }
+
+        function toggleSettings() {
+            showNotification('Settings panel coming soon!', 'success');
+        }
+
+        function showNotification(message, type) {
+            const notification = document.getElementById('notification');
+            if (!notification) {
+                console.error('Notification element not found');
+                return;
+            }
+            
+            notification.textContent = message;
+            notification.className = `notification ${type} show`;
+            
+            // Auto hide after 3 seconds
+            setTimeout(() => {
+                notification.className = 'notification';
+            }, 3000);
+        }
+
+        // Focus effects
+        document.addEventListener('focusin', function(e) {
+            if (e.target.classList.contains('token-amount')) {
+                e.target.closest('.token-input').classList.add('focused');
+            }
+        });
+
+        document.addEventListener('focusout', function(e) {
+            if (e.target.classList.contains('token-amount')) {
+                e.target.closest('.token-input').classList.remove('focused');
+            }
+        });
+
+        // Tab switching
+        function switchTab(tab) {
+            currentTab = tab;
+            
+            // Update tab buttons
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Show/hide cards
+            if (tab === 'swap') {
+                document.getElementById('swapCard').style.display = 'block';
+                document.getElementById('liquidityCard').style.display = 'none';
+                document.getElementById('transactionsCard').style.display = 'none';
+            } else if (tab === 'liquidity') {
+                document.getElementById('swapCard').style.display = 'none';
+                document.getElementById('liquidityCard').style.display = 'block';
+                document.getElementById('transactionsCard').style.display = 'none';
+                updateLPBalances();
+            } else if (tab === 'transactions') {
+                document.getElementById('swapCard').style.display = 'none';
+                document.getElementById('liquidityCard').style.display = 'none';
+                document.getElementById('transactionsCard').style.display = 'block';
+                loadTransactionHistory();
+            }
+        }
+
+        // LP Token Selection
+        function selectLPToken(position) {
+            const tokenList = Object.keys(tokens);
+            const currentIndex = tokenList.indexOf(lpTokens[position]);
+            const nextIndex = (currentIndex + 1) % tokenList.length;
+            
+            lpTokens[position] = tokenList[nextIndex];
+            updateLPTokenSelectors();
+            updateLPBalances();
+            calculateLP();
+        }
+
+        function updateLPTokenSelectors() {
+            // Update token A
+            const tokenA = tokens[lpTokens.tokenA];
+            document.querySelector('#liquidityCard .token-input:first-of-type .token-icon').textContent = tokenA.icon;
+            document.querySelector('#liquidityCard .token-input:first-of-type .token-select span').textContent = tokenA.symbol;
+            
+            // Update token B
+            const tokenB = tokens[lpTokens.tokenB];
+            document.querySelector('#liquidityCard .token-input:last-of-type .token-icon').textContent = tokenB.icon;
+            document.querySelector('#liquidityCard .token-input:last-of-type .token-select span').textContent = tokenB.symbol;
+        }
+
+        function updateLPBalances() {
+            document.getElementById('tokenABalance').textContent = tokens[lpTokens.tokenA].balance;
+            document.getElementById('tokenBBalance').textContent = tokens[lpTokens.tokenB].balance;
+        }
+
+        // LP Calculations
+        function calculateLP() {
+            const tokenAAmount = parseFloat(document.getElementById('tokenAAmount').value) || 0;
+            const tokenBAmount = parseFloat(document.getElementById('tokenBAmount').value) || 0;
+            
+            if (tokenAAmount === 0 && tokenBAmount === 0) {
+                document.getElementById('lpInfo').style.display = 'none';
+                document.getElementById('addLPButton').textContent = 'Enter amounts';
+                document.getElementById('addLPButton').disabled = true;
+                return;
+            }
+            
+            // Auto-calculate ratios (simple 1:1 ratio for demo)
+            if (tokenAAmount > 0 && tokenBAmount === 0) {
+                document.getElementById('tokenBAmount').value = tokenAAmount;
+            } else if (tokenBAmount > 0 && tokenAAmount === 0) {
+                document.getElementById('tokenAAmount').value = tokenBAmount;
+            }
+            
+            // Update LP info
+            const poolShare = ((tokenAAmount + tokenBAmount) / 100000 * 100).toFixed(4);
+            document.getElementById('poolShare').textContent = `${poolShare}%`;
+            document.getElementById('lpRate').textContent = `1 ${lpTokens.tokenA} = 1 ${lpTokens.tokenB}`;
+            document.getElementById('lpInfo').style.display = 'block';
+            
+            // Update button
+            if (wallet && tokenAAmount > 0 && tokenBAmount > 0) {
+                document.getElementById('addLPButton').textContent = `Add ${lpTokens.tokenA}/${lpTokens.tokenB} Liquidity`;
+                document.getElementById('addLPButton').disabled = false;
+            }
+        }
+
+        // Add Liquidity Function
+        async function addLiquidity() {
+            if (!wallet) {
+                showNotification('Please connect wallet first', 'error');
+                return;
+            }
+            
+            const tokenAAmount = parseFloat(document.getElementById('tokenAAmount').value);
+            const tokenBAmount = parseFloat(document.getElementById('tokenBAmount').value);
+            
+            if (tokenAAmount <= 0 || tokenBAmount <= 0) {
+                showNotification('Invalid amounts', 'error');
+                return;
+            }
+            
+            document.getElementById('addLPButton').innerHTML = '<div class="loading"></div> Adding Liquidity...';
+            document.getElementById('addLPButton').disabled = true;
+            
+            try {
+                // Try to record on server if available
+                try {
+                    if (currentUser) {
+                        const lpOrder = {
+                            id: `lp_${Date.now()}`,
+                            userId: currentUser.id,
+                            type: 'add_liquidity',
+                            tokenA: lpTokens.tokenA,
+                            tokenB: lpTokens.tokenB,
+                            amountA: tokenAAmount.toString(),
+                            amountB: tokenBAmount.toString(),
+                            timestamp: Date.now(),
+                            nonce: Math.floor(Math.random() * 1000000),
+                            signature: '0x' + Array(128).fill(0).map(() => Math.floor(Math.random() * 16).toString(16)).join(''),
+                            chainId: 31337
+                        };
+                        
+                        await apiCall('/orders', 'POST', lpOrder);
+                        console.log('📝 LP order recorded on server');
+                    }
+                } catch (serverError) {
+                    console.log('⚠️ Server recording failed, continuing with local LP:', serverError.message);
+                }
+                
+                // Update balances
+                tokens[lpTokens.tokenA].balance = (parseFloat(tokens[lpTokens.tokenA].balance) - tokenAAmount).toString();
+                tokens[lpTokens.tokenB].balance = (parseFloat(tokens[lpTokens.tokenB].balance) - tokenBAmount).toString();
+                
+                updateLPBalances();
+                
+                // Reset form
+                document.getElementById('tokenAAmount').value = '';
+                document.getElementById('tokenBAmount').value = '';
+                document.getElementById('lpInfo').style.display = 'none';
+                
+                showNotification(`Successfully added ${tokenAAmount} ${lpTokens.tokenA} + ${tokenBAmount} ${lpTokens.tokenB} to liquidity pool`, 'success');
+                
+            } catch (error) {
+                showNotification(`Add liquidity failed: ${error.message}`, 'error');
+            } finally {
+                document.getElementById('addLPButton').textContent = 'Enter amounts';
+                document.getElementById('addLPButton').disabled = true;
+            }
+        }
+
+        // Multi-Swap Functions
+        function toggleMultiSwap() {
+            multiSwapMode = document.getElementById('multiSwapMode').checked;
+            const multiOutputs = document.getElementById('multiOutputs');
+            
+            if (multiSwapMode) {
+                multiOutputs.style.display = 'block';
+                document.getElementById('swapButton').textContent = '🚀 Multi-Swap';
+                showNotification('Multi-token swap mode enabled! Select output tokens below.', 'success');
+            } else {
+                multiOutputs.style.display = 'none';
+                selectedOutputTokens = ['USDC'];
+                updateOutputTokenButtons();
+                calculateSwap();
+            }
+        }
+
+        function toggleOutputToken(token) {
+            if (selectedOutputTokens.includes(token)) {
+                if (selectedOutputTokens.length > 1) {
+                    selectedOutputTokens = selectedOutputTokens.filter(t => t !== token);
+                }
+            } else {
+                selectedOutputTokens.push(token);
+            }
+            
+            updateOutputTokenButtons();
+            calculateSwap();
+            
+            console.log('🎯 Selected output tokens:', selectedOutputTokens);
+        }
+
+        function updateOutputTokenButtons() {
+            document.querySelectorAll('.output-token-btn').forEach(btn => {
+                const token = btn.getAttribute('data-token');
+                if (selectedOutputTokens.includes(token)) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        // Orbital AMM Functions
+        function selectOrbitalPool() {
+            const poolId = document.getElementById('poolSelector').value;
+            const pool = orbitalPools[poolId];
+            
+            if (!pool) return;
+            
+            // Update pool info display
+            const poolInfo = document.getElementById('poolInfoDisplay');
+            let poolName = poolId.replace('_POOL', '');
+            let icon = poolId === 'STABLE_POOL' ? '🏦' : poolId === 'ETH_POOL' ? '⟠' : '₿';
+            
+            poolInfo.innerHTML = `
+                <div style="font-weight: 600; color: #333; margin-bottom: 8px;">${icon} ${poolName} Pool</div>
+                <div style="color: #666; margin-bottom: 4px;">Tokens: ${pool.tokens.join(', ')}</div>
+                <div style="color: #666; margin-bottom: 4px;">Total Liquidity: $${pool.totalSupply.toLocaleString()}</div>
+                <div style="color: #666; margin-bottom: 4px;">Amplification: ${pool.amplification}x</div>
+                <div style="color: #666;">Depeg Protection: ±${(pool.depegThreshold * 100).toFixed(1)}%</div>
+            `;
+            
+            // Update LP token selectors
+            currentOrbitalPool = poolId;
+            updateOrbitalTokenSelectors();
+            
+            showNotification(`Selected ${poolName} Pool with 3-token liquidity`, 'success');
+        }
+
+        function updateOrbitalTokenSelectors() {
+            const poolId = currentOrbitalPool || 'STABLE_POOL';
+            const pool = orbitalPools[poolId];
+            
+            if (!pool) return;
+            
+            // Update the LP form to show 3 tokens
+            lpTokens.tokenA = pool.tokens[0];
+            lpTokens.tokenB = pool.tokens[1];
+            lpTokens.tokenC = pool.tokens[2];
+            
+            updateLPTokenSelectors();
+        }
+
+        // Enhanced Multi-Token Swap Calculation
+        function calculateMultiSwap(fromAmount, fromToken) {
+            if (!multiSwapMode || selectedOutputTokens.length === 1) {
+                return calculateSwap();
+            }
+            
+            console.log('🚀 Calculating multi-token swap...');
+            
+            const splits = selectedOutputTokens.length;
+            const amountPerToken = fromAmount / splits;
+            const fee = 0.0003; // 0.03%
+            
+            let totalToAmount = 0;
+            let breakdown = [];
+            
+            selectedOutputTokens.forEach(toToken => {
+                let exchangeRate = 1;
+                const pair = `${fromToken}/${toToken}`;
+                
+                if (marketData[pair]) {
+                    exchangeRate = marketData[pair].price;
+                } else if (marketData[`${toToken}/${fromToken}`]) {
+                    exchangeRate = 1 / marketData[`${toToken}/${fromToken}`].price;
+                } else {
+                    // Default rates
+                    if (fromToken === 'ETH' && toToken === 'USDC') exchangeRate = 2000;
+                    else if (fromToken === 'ETH' && toToken === 'BTC') exchangeRate = 0.04;
+                    else if (fromToken === 'ETH' && toToken === 'MATIC') exchangeRate = 2500;
+                    else if (fromToken === 'ETH' && toToken === 'WETH') exchangeRate = 1;
+                }
+                
+                const toAmount = (amountPerToken - (amountPerToken * fee)) * exchangeRate;
+                totalToAmount += toAmount;
+                
+                breakdown.push({
+                    token: toToken,
+                    amount: toAmount,
+                    percentage: (100 / splits).toFixed(1)
+                });
+            });
+            
+            // Update UI with breakdown
+            const swapInfo = document.getElementById('swapInfo');
+            swapInfo.innerHTML = `
+                <div class="info-row">
+                    <span class="info-label">🚀 Multi-Swap Breakdown</span>
+                    <span class="info-value">${splits} tokens</span>
+                </div>
+                ${breakdown.map(b => `
+                    <div class="info-row">
+                        <span class="info-label">${b.percentage}% → ${b.token}</span>
+                        <span class="info-value">${b.amount.toFixed(6)}</span>
+                    </div>
+                `).join('')}
+                <div class="info-row">
+                    <span class="info-label">Total Fee (0.03%)</span>
+                    <span class="info-value">${(fromAmount * fee).toFixed(6)} ${fromToken}</span>
+                </div>
+            `;
+            swapInfo.style.display = 'block';
+            
+            // Update button - enable if amount > 0
+            if (fromAmount > 0) {
+                document.getElementById('swapButton').textContent = `🚀 Multi-Swap ${fromToken} → ${selectedOutputTokens.length} tokens`;
+                document.getElementById('swapButton').disabled = false;
+            }
+            
+            return { totalToAmount, breakdown, fee: fromAmount * fee };
+        }
+
+        // Enhanced calculate swap to support multi-swap
+        function calculateSwap() {
+            const fromAmount = parseFloat(document.getElementById('fromAmount').value) || 0;
+            const fromToken = selectedTokens.from;
+            
+            console.log('🔧 calculateSwap() called:', { fromAmount, fromToken, multiSwapMode, selectedOutputTokens });
+            
+            if (fromAmount === 0) {
+                document.getElementById('toAmount').value = '';
+                document.getElementById('swapInfo').style.display = 'none';
+                document.getElementById('swapButton').textContent = multiSwapMode ? '🚀 Multi-Swap' : 'Enter an amount';
+                document.getElementById('swapButton').disabled = true;
+                return;
+            }
+            
+            if (multiSwapMode && selectedOutputTokens.length > 1) {
+                return calculateMultiSwap(fromAmount, fromToken);
+            }
+            
+            // Regular single-token swap
+            const toToken = selectedTokens.to;
+            let exchangeRate = 1;
+            const pair = `${fromToken}/${toToken}`;
+            
+            if (marketData[pair]) {
+                exchangeRate = marketData[pair].price;
+            } else if (marketData[`${toToken}/${fromToken}`]) {
+                exchangeRate = 1 / marketData[`${toToken}/${fromToken}`].price;
+            } else {
+                // Default rates
+                if (fromToken === 'ETH' && toToken === 'USDC') exchangeRate = 2000;
+                else if (fromToken === 'USDC' && toToken === 'ETH') exchangeRate = 1/2000;
+                else if (fromToken === 'BTC' && toToken === 'USDC') exchangeRate = 50000;
+                else if (fromToken === 'USDC' && toToken === 'BTC') exchangeRate = 1/50000;
+            }
+            
+            const fee = fromAmount * 0.0003; // 0.03%
+            const toAmount = (fromAmount - fee) * exchangeRate;
+            
+            document.getElementById('toAmount').value = toAmount.toFixed(6);
+            
+            // Update swap info
+            document.getElementById('swapRate').textContent = `1 ${fromToken} = ${exchangeRate.toFixed(6)} ${toToken}`;
+            document.getElementById('priceImpact').textContent = '< 0.01%';
+            document.getElementById('swapFee').textContent = `${fee.toFixed(6)} ${fromToken} (0.03%)`;
+            document.getElementById('swapInfo').style.display = 'block';
+            
+            // Update button - enable if amount > 0
+            if (fromAmount > 0) {
+                if (multiSwapMode && selectedOutputTokens.length > 1) {
+                    document.getElementById('swapButton').textContent = `🚀 Multi-Swap ${fromToken} → ${selectedOutputTokens.length} tokens`;
+                } else {
+                    document.getElementById('swapButton').textContent = `Swap ${fromToken} for ${toToken}`;
+                }
+                document.getElementById('swapButton').disabled = false;
+            } else {
+                document.getElementById('swapButton').textContent = multiSwapMode ? '🚀 Multi-Swap' : 'Enter an amount';
+                document.getElementById('swapButton').disabled = true;
+            }
+        }
+
+        let currentOrbitalPool = 'STABLE_POOL';
+
+        async function loadTransactionHistory() {
+            console.log('📊 Loading transaction history...');
+            
+            try {
+                // Try to fetch from server if user is connected
+                if (currentUser) {
+                    const orders = await apiCall('/orders', 'GET');
+                    
+                    // Transform orders to transaction format
+                    const serverTransactions = orders.map(order => ({
+                        id: order.id,
+                        type: order.type || 'swap',
+                        status: order.status || 'success',
+                        fromToken: order.pair ? order.pair.split('/')[0] : order.fromToken,
+                        toToken: order.pair ? order.pair.split('/')[1] : order.outputTokens?.join(', '),
+                        amount: parseFloat(order.amount || order.fromAmount || 0),
+                        fee: parseFloat(order.fee || (order.amount * 0.0003) || 0),
+                        timestamp: order.timestamp || Date.now(),
+                        hash: order.signature?.slice(0, 10) + '...',
+                        poolInfo: order.swapType === 'orbital_amm' ? '🛸 Orbital AMM' : 'Regular DEX'
+                    }));
+                    
+                    // Merge server transactions with local transactions (avoid duplicates)
+                    const existingIds = transactionHistory.map(tx => tx.id);
+                    const newServerTxs = serverTransactions.filter(tx => !existingIds.includes(tx.id));
+                    transactionHistory = [...transactionHistory, ...newServerTxs];
+                } 
+                
+                // Sort all transactions by timestamp (newest first)
+                transactionHistory.sort((a, b) => b.timestamp - a.timestamp);
+                
+                // If no transactions exist (first time), show demo message
+                if (transactionHistory.length === 0) {
+                    console.log('No transactions found - user needs to make some swaps');
+                }
+                
+                renderTransactionList();
+                updateTransactionStats();
+                
+            } catch (error) {
+                console.error('❌ Failed to load transaction history:', error);
+                showNotification('Failed to load transactions', 'error');
+            }
+        }
+
+        function renderTransactionList() {
+            const listContainer = document.getElementById('transactionList');
+            
+            let filteredTransactions = transactionHistory;
+            if (currentFilter !== 'all') {
+                filteredTransactions = transactionHistory.filter(tx => {
+                    if (currentFilter === 'failed') return tx.status === 'failed';
+                    return tx.type === currentFilter;
+                });
+            }
+            
+            if (filteredTransactions.length === 0) {
+                listContainer.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📊</div>
+                        <div class="empty-title">No ${currentFilter === 'all' ? '' : currentFilter + ' '}transactions found</div>
+                        <div class="empty-description">Try a different filter or make some transactions</div>
+                    </div>
+                `;
+                return;
+            }
+            
+            const txHtml = filteredTransactions.map(tx => `
+                <div class="transaction-item ${tx.status}">
+                    <div class="transaction-header">
+                        <div class="transaction-type">
+                            ${getTransactionTypeDisplay(tx.type)} 
+                            ${tx.poolInfo ? `• ${tx.poolInfo}` : ''}
+                        </div>
+                        <div class="transaction-status ${tx.status}">
+                            ${tx.status.toUpperCase()}
+                        </div>
+                    </div>
+                    <div class="transaction-details">
+                        <div class="transaction-amount">
+                            ${tx.amount} ${tx.fromToken} → ${tx.toToken}
+                        </div>
+                        <div>Fee: ${tx.fee.toFixed(6)} ${tx.fromToken}</div>
+                        <div>Hash: ${tx.hash}</div>
+                    </div>
+                    <div class="transaction-time">
+                        ${formatTimestamp(tx.timestamp)}
+                    </div>
+                </div>
+            `).join('');
+            
+            listContainer.innerHTML = txHtml;
+        }
+
+        function getTransactionTypeDisplay(type) {
+            switch (type) {
+                case 'multi_swap': return '🚀 Multi-Swap';
+                case 'liquidity': return '💧 Add Liquidity';
+                case 'swap': 
+                default: return '🔄 Swap';
+            }
+        }
+
+        function formatTimestamp(timestamp) {
+            const date = new Date(timestamp);
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMins = Math.floor(diffMs / 60000);
+            const diffHours = Math.floor(diffMs / 3600000);
+            const diffDays = Math.floor(diffMs / 86400000);
+            
+            if (diffMins < 1) return 'Just now';
+            if (diffMins < 60) return `${diffMins}m ago`;
+            if (diffHours < 24) return `${diffHours}h ago`;
+            if (diffDays < 30) return `${diffDays}d ago`;
+            return date.toLocaleDateString();
+        }
+
+        function updateTransactionStats() {
+            const total = transactionHistory.length;
+            const successful = transactionHistory.filter(tx => tx.status === 'success').length;
+            const successRate = total > 0 ? Math.round((successful / total) * 100) : 100;
+            
+            document.getElementById('totalTxs').textContent = `${total} transaction${total !== 1 ? 's' : ''}`;
+            document.getElementById('successRate').textContent = `${successRate}% success`;
+        }
+
+        function filterTransactions(filter) {
+            currentFilter = filter;
+            
+            // Update filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            renderTransactionList();
+        }
+
+        function refreshTransactions() {
+            const refreshBtn = document.querySelector('.refresh-button');
+            refreshBtn.innerHTML = '🔄 Refreshing...';
+            refreshBtn.disabled = true;
+            
+            setTimeout(() => {
+                loadTransactionHistory();
+                refreshBtn.innerHTML = '🔄 Refresh Transactions';
+                refreshBtn.disabled = false;
+                showNotification('Transactions refreshed', 'success');
+            }, 1000);
+        }
+    </script>
+    </script>
+</body>
+</html>

@@ -13,11 +13,11 @@ const socket_io_1 = require("socket.io");
 const express_rate_limit_1 = __importDefault(require("express-rate-limit"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const orderbook_1 = require("./orderbook");
-const database_1 = require("./database");
+const database_memory_1 = require("./database-memory");
 const websocket_1 = require("./websocket");
 const routes_1 = require("./routes");
 const logger_1 = require("./logger");
-const contract_manager_1 = require("./contract-manager");
+const contract_manager_mock_1 = require("./contract-manager-mock");
 const constants_1 = require("../../shared/constants");
 dotenv_1.default.config();
 class MatchingEngineServer {
@@ -32,10 +32,23 @@ class MatchingEngineServer {
         });
         this.logger = new logger_1.Logger('MatchingEngine');
         this.orderBookManager = new orderbook_1.OrderBookManager();
-        this.databaseManager = new database_1.DatabaseManager();
+        this.databaseManager = new database_memory_1.InMemoryDatabaseManager();
         if (this.isBlockchainEnabled()) {
             const contractConfig = this.getContractConfig();
-            this.contractManager = new contract_manager_1.ContractManager(contractConfig, this.databaseManager);
+            this.contractManager = new contract_manager_mock_1.MockContractManager(contractConfig, this.databaseManager);
+        }
+        else {
+            const mockConfig = {
+                hybridCLOBAddress: '0x0000000000000000000000000000000000000000',
+                tokens: {
+                    BASE: '0x0000000000000000000000000000000000000000',
+                    QUOTE: '0x0000000000000000000000000000000000000000'
+                },
+                rpcUrl: 'http://localhost:8545',
+                privateKey: '0x0000000000000000000000000000000000000000000000000000000000000000',
+                chainId: 31337
+            };
+            this.contractManager = new contract_manager_mock_1.MockContractManager(mockConfig, this.databaseManager);
         }
         this.wsManager = new websocket_1.WebSocketManager(this.io, this.orderBookManager);
         this.setupMiddleware();
@@ -46,6 +59,11 @@ class MatchingEngineServer {
         return !!(process.env.RPC_URL &&
             process.env.PRIVATE_KEY &&
             process.env.HYBRID_CLOB_ADDRESS);
+    }
+    isDatabaseEnabled() {
+        return !!(process.env.POSTGRES_HOST &&
+            process.env.POSTGRES_USER &&
+            process.env.POSTGRES_PASSWORD);
     }
     getContractConfig() {
         if (!this.isBlockchainEnabled()) {
@@ -121,7 +139,7 @@ class MatchingEngineServer {
         });
         this.orderBookManager.on('orderCancelled', (order) => {
             this.logger.info(`Order cancelled: ${order.id}`);
-            this.databaseManager.updateOrder(order);
+            this.databaseManager.updateOrderStatus(order.id, order.status);
         });
         this.orderBookManager.on('tradeExecuted', (trade) => {
             this.logger.info(`Trade executed: ${trade.id}`);

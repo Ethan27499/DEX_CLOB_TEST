@@ -1,14 +1,15 @@
 import { Router } from 'express';
 import { OrderBookManager } from './orderbook';
-import { DatabaseManager } from './database';
+import { IDatabaseManager } from './database-interface';
 import { ContractManager } from './contract-manager';
+import { MockContractManager } from './contract-manager-mock';
 export declare class APIRouter {
     private router;
     private orderBookManager;
     private databaseManager;
     private contractManager?;
     private logger;
-    constructor(orderBookManager: OrderBookManager, databaseManager: DatabaseManager, contractManager?: ContractManager);
+    constructor(orderBookManager: OrderBookManager, databaseManager: IDatabaseManager, contractManager?: ContractManager | MockContractManager);
     private setupRoutes;
     private createOrderRateLimit;
     private cancelOrderRateLimit;

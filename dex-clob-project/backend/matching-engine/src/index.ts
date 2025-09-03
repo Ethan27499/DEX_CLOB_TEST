@@ -8,11 +8,13 @@ import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
 
 import { OrderBookManager } from './orderbook';
-import { DatabaseManager } from './database';
+import { InMemoryDatabaseManager } from './database-memory';
+import { IDatabaseManager } from './database-interface';
 import { WebSocketManager } from './websocket';
 import { APIRouter } from './routes';
 import { Logger } from './logger';
 import { ContractManager, ContractConfig } from './contract-manager';
+import { MockContractManager } from './contract-manager-mock';
 import { RATE_LIMITS } from '../../shared/constants';
 
 // Load environment variables
@@ -23,9 +25,9 @@ export class MatchingEngineServer {
   private server: any;
   private io: SocketIOServer;
   private orderBookManager: OrderBookManager;
-  private databaseManager: DatabaseManager;
+  private databaseManager: IDatabaseManager;
   private wsManager: WebSocketManager;
-  private contractManager: ContractManager;
+  private contractManager: ContractManager | MockContractManager;
   private logger: Logger;
 
   constructor() {
@@ -40,12 +42,27 @@ export class MatchingEngineServer {
     
     this.logger = new Logger('MatchingEngine');
     this.orderBookManager = new OrderBookManager();
-    this.databaseManager = new DatabaseManager();
     
-    // Initialize contract manager if blockchain integration is enabled
+    // Use real database now
+    this.databaseManager = new InMemoryDatabaseManager();
+    
+    // Use mock contract manager for now (until we setup real blockchain)
     if (this.isBlockchainEnabled()) {
       const contractConfig = this.getContractConfig();
-      this.contractManager = new ContractManager(contractConfig, this.databaseManager);
+      this.contractManager = new MockContractManager(contractConfig, this.databaseManager);
+    } else {
+      // Create a minimal mock config for off-chain mode
+      const mockConfig: ContractConfig = {
+        hybridCLOBAddress: '0x0000000000000000000000000000000000000000',
+        tokens: { 
+          BASE: '0x0000000000000000000000000000000000000000', 
+          QUOTE: '0x0000000000000000000000000000000000000000'
+        },
+        rpcUrl: 'http://localhost:8545',
+        privateKey: '0x0000000000000000000000000000000000000000000000000000000000000000',
+        chainId: 31337
+      };
+      this.contractManager = new MockContractManager(mockConfig, this.databaseManager);
     }
     
     this.wsManager = new WebSocketManager(this.io, this.orderBookManager);
@@ -60,6 +77,14 @@ export class MatchingEngineServer {
       process.env.RPC_URL && 
       process.env.PRIVATE_KEY && 
       process.env.HYBRID_CLOB_ADDRESS
+    );
+  }
+
+  private isDatabaseEnabled(): boolean {
+    return !!(
+      process.env.POSTGRES_HOST && 
+      process.env.POSTGRES_USER && 
+      process.env.POSTGRES_PASSWORD
     );
   }
 
@@ -120,6 +145,16 @@ export class MatchingEngineServer {
         version: process.env.npm_package_version || '1.0.0',
       });
     });
+    
+    // API health check
+    this.app.get('/api/health', (req, res) => {
+      res.json({
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        version: process.env.npm_package_version || '1.0.0',
+      });
+    });
 
     // API routes
     const apiRouter = new APIRouter(
@@ -127,6 +162,9 @@ export class MatchingEngineServer {
       this.databaseManager,
       this.contractManager
     );
+    
+    // Mount both /api and /api/v1 routes for backward compatibility
+    this.app.use('/api', apiRouter.getRouter());
     this.app.use('/api/v1', apiRouter.getRouter());
 
     // 404 handler
@@ -163,7 +201,7 @@ export class MatchingEngineServer {
 
     this.orderBookManager.on('orderCancelled', (order) => {
       this.logger.info(`Order cancelled: ${order.id}`);
-      this.databaseManager.updateOrder(order);
+      this.databaseManager.updateOrderStatus(order.id, order.status);
     });
 
     this.orderBookManager.on('tradeExecuted', (trade) => {

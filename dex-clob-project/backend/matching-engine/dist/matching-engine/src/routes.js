@@ -181,7 +181,7 @@ class APIRouter {
         try {
             const { userId, status, pair, limit = '50', offset = '0' } = req.query;
             if (userId) {
-                const orders = await this.databaseManager.getUserOrders(String(userId), parseInt(String(limit)), parseInt(String(offset)));
+                const orders = await this.databaseManager.getUserOrders(String(userId), parseInt(String(limit)));
                 res.json({ orders });
             }
             else {
@@ -220,8 +220,8 @@ class APIRouter {
     }
     async getTrades(req, res) {
         try {
-            const { pair, limit = '50', offset = '0' } = req.query;
-            const trades = await this.databaseManager.getTrades(String(pair), parseInt(String(limit)), parseInt(String(offset)));
+            const { pair, limit = '50', page = '1' } = req.query;
+            const trades = await this.databaseManager.getTrades(pair ? String(pair) : undefined, parseInt(String(limit)));
             res.json({ trades });
         }
         catch (error) {
@@ -467,7 +467,7 @@ class APIRouter {
                 });
                 return;
             }
-            const trades = await this.databaseManager.getTrades(pair, limit, parseInt(req.query.page) || 1);
+            const trades = await this.databaseManager.getTrades(pair, limit);
             res.json({
                 pair,
                 trades,
@@ -485,9 +485,24 @@ class APIRouter {
     async seedOrderbook(req, res) {
         try {
             const pair = 'ETH/USDC';
+            const testUsers = [
+                'test_user_1', 'test_user_2', 'test_user_3',
+                'test_user_4', 'test_user_5', 'test_user_6'
+            ];
+            for (const userId of testUsers) {
+                await this.databaseManager.saveUser({
+                    id: userId,
+                    address: userId,
+                    nonce: 0,
+                    isActive: true,
+                    createdAt: Date.now(),
+                    lastActivity: Date.now()
+                });
+            }
+            const timestamp = Date.now();
             const buyOrders = [
                 {
-                    id: 'buy_1',
+                    id: `buy_${timestamp}_1`,
                     userId: 'test_user_1',
                     pair,
                     side: 'buy',
@@ -497,13 +512,13 @@ class APIRouter {
                     filled: '0',
                     remaining: '1.5',
                     status: 'pending',
-                    timestamp: Date.now() - 5000,
+                    timestamp: timestamp - 5000,
                     nonce: 1,
                     signature: 'test_signature_1',
                     chainId: 31337,
                 },
                 {
-                    id: 'buy_2',
+                    id: `buy_${timestamp}_2`,
                     userId: 'test_user_2',
                     pair,
                     side: 'buy',
@@ -513,13 +528,13 @@ class APIRouter {
                     filled: '0',
                     remaining: '2.0',
                     status: 'pending',
-                    timestamp: Date.now() - 4000,
+                    timestamp: timestamp - 4000,
                     nonce: 1,
                     signature: 'test_signature_2',
                     chainId: 31337,
                 },
                 {
-                    id: 'buy_3',
+                    id: `buy_${timestamp}_3`,
                     userId: 'test_user_3',
                     pair,
                     side: 'buy',
@@ -529,7 +544,7 @@ class APIRouter {
                     filled: '0',
                     remaining: '0.5',
                     status: 'pending',
-                    timestamp: Date.now() - 3000,
+                    timestamp: timestamp - 3000,
                     nonce: 1,
                     signature: 'test_signature_3',
                     chainId: 31337,
@@ -537,7 +552,7 @@ class APIRouter {
             ];
             const sellOrders = [
                 {
-                    id: 'sell_1',
+                    id: `sell_${timestamp}_1`,
                     userId: 'test_user_4',
                     pair,
                     side: 'sell',
@@ -547,13 +562,13 @@ class APIRouter {
                     filled: '0',
                     remaining: '1.0',
                     status: 'pending',
-                    timestamp: Date.now() - 2000,
+                    timestamp: timestamp - 2000,
                     nonce: 1,
                     signature: 'test_signature_4',
                     chainId: 31337,
                 },
                 {
-                    id: 'sell_2',
+                    id: `sell_${timestamp}_2`,
                     userId: 'test_user_5',
                     pair,
                     side: 'sell',
@@ -563,13 +578,13 @@ class APIRouter {
                     filled: '0',
                     remaining: '2.5',
                     status: 'pending',
-                    timestamp: Date.now() - 1000,
+                    timestamp: timestamp - 1000,
                     nonce: 1,
                     signature: 'test_signature_5',
                     chainId: 31337,
                 },
                 {
-                    id: 'sell_3',
+                    id: `sell_${timestamp}_3`,
                     userId: 'test_user_6',
                     pair,
                     side: 'sell',
@@ -579,7 +594,7 @@ class APIRouter {
                     filled: '0',
                     remaining: '1.8',
                     status: 'pending',
-                    timestamp: Date.now(),
+                    timestamp: timestamp,
                     nonce: 1,
                     signature: 'test_signature_6',
                     chainId: 31337,

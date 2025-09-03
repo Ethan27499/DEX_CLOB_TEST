@@ -7617,3 +7617,3490 @@
   message: 'Database connection closed',
   timestamp: '2025-08-25T14:38:12.800Z'
 }
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:50:05.450Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:200:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:50:05.482Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:200:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:50:05.490Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:50:55.976Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:201:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:50:56.000Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:201:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:50:56.006Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:51:20.533Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:51:20.554Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:51:20.562Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:51:40.186Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:51:40.208Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:51:40.220Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:51:55.696Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:51:55.716Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:51:55.724Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:52:06.690Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:06.721Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:06.733Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:52:19.546Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:19.565Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:19.572Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:52:41.702Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:41.720Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:216:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:41.728Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:52:52.842Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:52.860Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:52.867Z'
+}
+{
+  component: 'ContractManager',
+  network: 31337,
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  level: 'info',
+  message: 'Contract manager initialized',
+  timestamp: '2025-08-29T14:52:59.792Z'
+}
+{
+  component: 'DatabaseManager',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to connect to database:',
+  timestamp: '2025-08-29T14:52:59.821Z'
+}
+{
+  component: 'MatchingEngine',
+  error: AggregateError: 
+      at Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\node_modules\pg-pool\index.js:45:11
+      at processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at DatabaseManager.connect (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\database.ts:25:22)
+      at MatchingEngineServer.start (Z:\DEX_CLOB\DEX_CLOB_TEST\dex-clob-project\backend\matching-engine\src\index.ts:217:7) {
+    code: 'ECONNREFUSED',
+    [errors]: [
+      Error: connect ECONNREFUSED ::1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '::1',
+        port: 5432
+      },
+      Error: connect ECONNREFUSED 127.0.0.1:5432
+          at createConnectionError (node:net:1678:14)
+          at afterConnectMultiple (node:net:1708:16) {
+        errno: -4078,
+        code: 'ECONNREFUSED',
+        syscall: 'connect',
+        address: '127.0.0.1',
+        port: 5432
+      }
+    ]
+  },
+  level: 'error',
+  message: 'Failed to start server:',
+  timestamp: '2025-08-29T14:52:59.829Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Using mock database (in-memory storage)',
+  timestamp: '2025-08-29T14:53:20.680Z'
+}
+{
+  component: 'MockDatabaseManager',
+  level: 'info',
+  message: 'Mock database connected (in-memory storage)',
+  timestamp: '2025-08-29T14:53:20.687Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T14:53:20.688Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T14:53:20.702Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T14:53:20.702Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Running in off-chain mode',
+  timestamp: '2025-08-29T14:53:20.702Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T14:53:20.705Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Using mock database (in-memory storage)',
+  timestamp: '2025-08-29T14:53:31.297Z'
+}
+{
+  component: 'MockDatabaseManager',
+  level: 'info',
+  message: 'Mock database connected (in-memory storage)',
+  timestamp: '2025-08-29T14:53:31.304Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T14:53:31.305Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T14:53:31.319Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T14:53:31.320Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Running in off-chain mode',
+  timestamp: '2025-08-29T14:53:31.320Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T14:53:31.321Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Using mock database (in-memory storage)',
+  timestamp: '2025-08-29T14:53:40.601Z'
+}
+{
+  component: 'MockDatabaseManager',
+  level: 'info',
+  message: 'Mock database connected (in-memory storage)',
+  timestamp: '2025-08-29T14:53:40.610Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T14:53:40.611Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T14:53:40.623Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T14:53:40.624Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Running in off-chain mode',
+  timestamp: '2025-08-29T14:53:40.624Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T14:53:40.624Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T14:53:52.989Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Using mock database (in-memory storage)',
+  timestamp: '2025-08-29T15:03:58.701Z'
+}
+{
+  component: 'MockDatabaseManager',
+  level: 'info',
+  message: 'Mock database connected (in-memory storage)',
+  timestamp: '2025-08-29T15:03:58.710Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:03:58.705Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:03:58.711Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:03:58.711Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:03:58.728Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:03:58.729Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:03:58.729Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:03:58.729Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:03:58.711Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T15:04:27.523Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T15:04:27.527Z'
+}
+{
+  component: 'MockDatabaseManager',
+  level: 'info',
+  message: 'Mock database disconnected',
+  timestamp: '2025-08-29T15:04:27.528Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Using mock database (in-memory storage)',
+  timestamp: '2025-08-29T15:04:56.833Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:04:56.837Z'
+}
+{
+  component: 'MockDatabaseManager',
+  level: 'info',
+  message: 'Mock database connected (in-memory storage)',
+  timestamp: '2025-08-29T15:04:56.843Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:04:56.845Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:04:56.845Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:04:56.867Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:04:56.867Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:04:56.867Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:04:56.868Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:04:56.845Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T15:05:20.392Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T15:05:20.394Z'
+}
+{
+  component: 'MockDatabaseManager',
+  level: 'info',
+  message: 'Mock database disconnected',
+  timestamp: '2025-08-29T15:05:20.395Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:18:40.729Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:18:40.720Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:18:40.729Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:18:40.742Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:18:40.743Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:18:40.743Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:18:40.743Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:18:40.729Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T15:19:33.468Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T15:19:33.472Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:20:25.396Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:20:25.390Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:20:25.397Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:20:25.409Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:20:25.409Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:20:25.409Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:20:25.410Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:20:25.397Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T15:20:50.478Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T15:20:50.482Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:21:34.994Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:21:34.984Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:21:34.995Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:21:35.007Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:21:35.008Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:21:35.008Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:21:35.008Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:21:34.994Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T15:27:32.564Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T15:27:32.568Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:29:38.603Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:29:38.610Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:29:38.610Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:29:38.610Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:29:38.621Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:29:38.621Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:29:38.622Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:29:38.622Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T15:34:12.510Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T15:34:12.513Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:34:23.530Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:34:23.539Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:34:23.539Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:34:23.540Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:34:23.552Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:34:23.552Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:34:23.552Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:34:23.553Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T15:36:25.319Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T15:36:25.321Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:43:02.631Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:43:02.638Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:43:02.639Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:43:02.639Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:43:02.662Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:43:02.663Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:43:02.663Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:43:02.664Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:06.431Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:11.053Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:16.371Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:21.051Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:26.363Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:31.115Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:36.417Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:41.056Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:46.373Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:51.060Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:43:56.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:01.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:06.126Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:08.159Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:13.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:18.430Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:23.116Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:28.141Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:32.819Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:38.123Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:43.129Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:48.121Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:53.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:44:58.124Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:45:03.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:45:08.121Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:45:13.432Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:45:18.121Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T15:46:10.061Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T15:46:10.054Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T15:46:10.061Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T15:46:10.073Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T15:46:10.073Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T15:46:10.073Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T15:46:10.074Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T15:46:10.061Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:10.224Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:13.436Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:18.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:23.426Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:37.095Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:37.939Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:43.436Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:48.116Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:53.121Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:46:57.929Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:02.939Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:08.124Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:13.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:18.124Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:21.054Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:26.423Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:31.124Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:36.437Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:41.126Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:46.424Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:51.115Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:47:56.116Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:48:01.123Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:48:50.492Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:48:56.423Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:00.175Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:05.161Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:10.145Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:15.461Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:18.379Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:24.430Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:28.362Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:33.359Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:39.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:44.129Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:49.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:49:54.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:00.520Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:06.118Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:11.422Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:16.116Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:21.430Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:26.125Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:31.435Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:50:59.672Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:00.497Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:05.995Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:11.115Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:16.472Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:21.138Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:26.139Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:32.116Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:37.429Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:40.508Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:45.788Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:50.167Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:51:56.435Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:01.123Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:06.419Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:11.126Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:16.123Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:21.112Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:24.277Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:30.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:32.279Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:38.436Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:43.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:48.435Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:53.114Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:52:58.123Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:03.417Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:09.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:14.128Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:19.116Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:24.116Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:29.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:34.118Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:36.479Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:42.115Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:47.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:50.916Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:53:56.117Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:01.114Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:06.113Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:11.129Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:18.524Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:24.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:29.117Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:32.028Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:37.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:42.117Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:47.123Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:52.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:54:57.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:02.118Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:10.867Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:16.125Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:21.115Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:23.562Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:29.120Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:34.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:39.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:40.959Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:45.945Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:51.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:55:55.200Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:00.174Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:05.174Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:10.172Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:15.221Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:21.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:26.112Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:29.404Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:35.117Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:39.383Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:44.172Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:50.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:54.124Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:56:59.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:04.135Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:09.133Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:15.117Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/trades',
+  timestamp: '2025-08-29T15:57:15.119Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:19.124Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:24.133Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:29.137Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:35.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:38.026Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:43.123Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:48.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:53.431Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:57:58.125Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:58:03.428Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:58:08.129Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/trades',
+  timestamp: '2025-08-29T15:58:08.131Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:58:13.125Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:58:18.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:58:23.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T15:58:28.131Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:00:13.184Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:00:13.177Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:00:13.185Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:00:13.195Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:00:13.195Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:00:13.197Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:00:13.197Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:00:13.185Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:00:41.360Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:00:46.418Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:00:50.960Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:00:56.428Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:01.127Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:06.430Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:11.122Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/trades',
+  timestamp: '2025-08-29T16:01:11.125Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:16.435Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:20.968Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:26.275Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:31.412Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36 Edg/139.0.0.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:01:37.420Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T16:03:54.402Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T16:03:54.405Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:04:27.601Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:04:27.593Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:04:27.601Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:04:27.615Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:04:27.615Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:04:27.616Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:04:27.616Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:04:27.601Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T16:06:22.181Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T16:06:22.185Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:06:45.788Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:06:45.781Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:06:45.789Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:06:45.801Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:06:45.801Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:06:45.802Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:06:45.802Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:06:45.788Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T16:06:58.528Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T16:06:58.533Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:08:46.632Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:08:46.623Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:08:46.633Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:08:46.644Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:08:46.645Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:08:46.645Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:08:46.645Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:08:46.632Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T16:09:02.895Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T16:09:02.899Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:09:13.709Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:09:13.700Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:09:13.710Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:09:13.722Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:09:13.723Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:09:13.723Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:09:13.724Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:09:13.710Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'axios/1.11.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:09:21.669Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'axios/1.11.0',
+  level: 'info',
+  message: 'GET /api/health',
+  timestamp: '2025-08-29T16:09:24.075Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:11:45.339Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:11:45.332Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:11:45.340Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:11:45.354Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:11:45.355Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:11:45.355Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:11:45.355Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:11:45.340Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Received SIGINT, starting graceful shutdown...',
+  timestamp: '2025-08-29T16:12:08.391Z'
+}
+{
+  component: 'WebSocketManager',
+  level: 'info',
+  message: 'WebSocket server closed',
+  timestamp: '2025-08-29T16:12:08.395Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:12:56.778Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:12:56.784Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:12:56.784Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:12:56.785Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:12:56.797Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:12:56.797Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:12:56.797Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:12:56.798Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:17:32.762Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:17:32.752Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:17:32.763Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:17:32.778Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:17:32.779Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:17:32.779Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:17:32.779Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:17:32.762Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Database connected successfully',
+  timestamp: '2025-08-29T16:31:03.663Z'
+}
+{
+  component: 'MockContractManager',
+  hybridCLOB: '0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9',
+  network: 31337,
+  level: 'info',
+  message: 'Mock contract manager initialized (off-chain mode)',
+  timestamp: '2025-08-29T16:31:03.657Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Contract event listeners started',
+  timestamp: '2025-08-29T16:31:03.663Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Matching Engine Server started on 0.0.0.0:3002',
+  timestamp: '2025-08-29T16:31:03.682Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'WebSocket server ready for connections',
+  timestamp: '2025-08-29T16:31:03.682Z'
+}
+{
+  component: 'MatchingEngine',
+  level: 'info',
+  message: 'Blockchain integration enabled',
+  timestamp: '2025-08-29T16:31:03.683Z'
+}
+{
+  component: 'MatchingEngine',
+  address: '0.0.0.0',
+  family: 'IPv4',
+  port: 3002,
+  level: 'info',
+  message: 'Server actually bound to:',
+  timestamp: '2025-08-29T16:31:03.683Z'
+}
+{
+  component: 'MockContractManager',
+  level: 'info',
+  message: 'Mock event listeners started (no-op)',
+  timestamp: '2025-08-29T16:31:03.663Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.2 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36',
+  level: 'info',
+  message: 'GET /dex-swap-ui.html',
+  timestamp: '2025-08-29T16:33:06.998Z'
+}
+{
+  component: 'MatchingEngine',
+  ip: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.103.2 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36',
+  level: 'info',
+  message: 'GET /dex-swap-ui.html',
+  timestamp: '2025-08-29T16:34:50.605Z'
+}
