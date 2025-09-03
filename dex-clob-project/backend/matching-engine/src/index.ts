@@ -9,7 +9,7 @@ import dotenv from 'dotenv';
 import Joi from 'joi';
 
 import { OrderBookManager } from './orderbook';
-import { InMemoryDatabaseManager } from './database-memory';
+import { DatabaseFactory, DatabaseType } from './database-factory';
 import { IDatabaseManager } from './database-interface';
 import { WebSocketManager } from './websocket';
 import { APIRouter } from './routes';
@@ -108,9 +108,17 @@ export class MatchingEngineServer {
     this.logger = new Logger('MatchingEngine');
     this.orderBookManager = new OrderBookManager();
     
-    // Use real database now
-    this.databaseManager = new InMemoryDatabaseManager();
-    
+    this.setupMiddleware();
+    this.setupRoutes();
+  }
+
+  async initializeDatabase(): Promise<void> {
+    // Initialize database using factory (supports multiple types)
+    const dbType = process.env.DATABASE_TYPE as DatabaseType || 'memory';
+    this.databaseManager = await DatabaseFactory.createWithHealthCheck(dbType);
+  }
+
+  async initializeContractManager(): Promise<void> {
     // Use mock contract manager for now (until we setup real blockchain)
     if (this.isBlockchainEnabled()) {
       const contractConfig = this.getContractConfig();
@@ -129,11 +137,10 @@ export class MatchingEngineServer {
       };
       this.contractManager = new MockContractManager(mockConfig, this.databaseManager);
     }
-    
+  }
+
+  async initializeWebSocket(): Promise<void> {
     this.wsManager = new WebSocketManager(this.io, this.orderBookManager);
-    
-    this.setupMiddleware();
-    this.setupRoutes();
     this.setupEventHandlers();
   }
 
@@ -701,15 +708,19 @@ export class MatchingEngineServer {
 
   public async start(): Promise<void> {
     try {
-      // Initialize database connection
-      await this.databaseManager.connect();
+      // Initialize all components asynchronously
+      await this.initializeDatabase();
       this.logger.info('Database connected successfully');
 
+      await this.initializeContractManager();
+      
       // Initialize contract manager if available
       if (this.contractManager) {
         this.contractManager.startEventListeners();
         this.logger.info('Contract event listeners started');
       }
+
+      await this.initializeWebSocket();
 
       // Start server with explicit IPv4 binding  
       const port = Number(process.env.PORT) || 3001;

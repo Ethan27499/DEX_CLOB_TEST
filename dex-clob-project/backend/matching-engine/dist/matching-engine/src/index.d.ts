@@ -10,6 +10,9 @@ export declare class MatchingEngineServer {
     private contractManager;
     private logger;
     constructor();
+    initializeDatabase(): Promise<void>;
+    initializeContractManager(): Promise<void>;
+    initializeWebSocket(): Promise<void>;
     private isBlockchainEnabled;
     private isDatabaseEnabled;
     private getContractConfig;

@@ -13,7 +13,7 @@ const socket_io_1 = require("socket.io");
 const express_rate_limit_1 = __importDefault(require("express-rate-limit"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const orderbook_1 = require("./orderbook");
-const database_memory_1 = require("./database-memory");
+const database_factory_1 = require("./database-factory");
 const websocket_1 = require("./websocket");
 const routes_1 = require("./routes");
 const logger_1 = require("./logger");
@@ -75,7 +75,14 @@ class MatchingEngineServer {
         });
         this.logger = new logger_1.Logger('MatchingEngine');
         this.orderBookManager = new orderbook_1.OrderBookManager();
-        this.databaseManager = new database_memory_1.InMemoryDatabaseManager();
+        this.setupMiddleware();
+        this.setupRoutes();
+    }
+    async initializeDatabase() {
+        const dbType = process.env.DATABASE_TYPE || 'memory';
+        this.databaseManager = await database_factory_1.DatabaseFactory.createWithHealthCheck(dbType);
+    }
+    async initializeContractManager() {
         if (this.isBlockchainEnabled()) {
             const contractConfig = this.getContractConfig();
             this.contractManager = new contract_manager_mock_1.MockContractManager(contractConfig, this.databaseManager);
@@ -93,9 +100,9 @@ class MatchingEngineServer {
             };
             this.contractManager = new contract_manager_mock_1.MockContractManager(mockConfig, this.databaseManager);
         }
+    }
+    async initializeWebSocket() {
         this.wsManager = new websocket_1.WebSocketManager(this.io, this.orderBookManager);
-        this.setupMiddleware();
-        this.setupRoutes();
         this.setupEventHandlers();
     }
     isBlockchainEnabled() {
@@ -512,12 +519,14 @@ class MatchingEngineServer {
     }
     async start() {
         try {
-            await this.databaseManager.connect();
+            await this.initializeDatabase();
             this.logger.info('Database connected successfully');
+            await this.initializeContractManager();
             if (this.contractManager) {
                 this.contractManager.startEventListeners();
                 this.logger.info('Contract event listeners started');
             }
+            await this.initializeWebSocket();
             const port = Number(process.env.PORT) || 3001;
             this.server.listen(port, '0.0.0.0', () => {
                 this.logger.info(`Matching Engine Server started on 0.0.0.0:${port}`);
