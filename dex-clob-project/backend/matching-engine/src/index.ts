@@ -18,19 +18,19 @@ import { ContractManager, ContractConfig } from './contract-manager';
 import { MockContractManager } from './contract-manager-mock';
 import { RATE_LIMITS } from '../../shared/constants';
 
+// Import from security framework
+import { 
+  AuthenticatedRequest, 
+  createSession, 
+  destroySession, 
+  validateSession,
+  generateAccessToken, 
+  generateRefreshToken,
+  verifyToken
+} from './security/auth-simple';
+
 // Load environment variables
 dotenv.config();
-
-// Simple types for enhanced security
-interface AuthenticatedRequest extends express.Request {
-  user?: {
-    id: string;
-    address: string;
-    role: 'user' | 'admin';
-    permissions: string[];
-  };
-  sessionId?: string;
-}
 
 // Simple security middleware placeholders
 const setupSecurity = () => [
@@ -320,23 +320,336 @@ export class MatchingEngineServer {
   }
 
   private setupAuthRoutes(): void {
-    // Authentication implementation will be added here
-    // This is a placeholder for the missing import dependencies
+    // Session-based authentication
+    this.app.post('/auth/session', 
+      ipRateLimit(5, 15 * 60 * 1000), // 5 attempts per 15 minutes
+      async (req: AuthenticatedRequest, res) => {
+        try {
+          const { address, signature, message } = req.body;
+          
+          // Basic validation
+          if (!address || !signature) {
+            return res.status(400).json({
+              success: false,
+              error: 'Invalid authentication data'
+            });
+          }
+
+          const sessionId = createSession(address, address, req.ip || 'unknown');
+          
+          res.json({
+            success: true,
+            sessionId,
+            address,
+            expiresIn: '24h'
+          });
+        } catch (error) {
+          this.logger.error('Session auth failed:', error);
+          res.status(500).json({
+            success: false,
+            error: 'Authentication failed'
+          });
+        }
+      }
+    );
+
+    // JWT authentication endpoint
+    this.app.post('/auth/jwt',
+      ipRateLimit(5, 15 * 60 * 1000), // 5 attempts per 15 minutes
+      async (req: AuthenticatedRequest, res) => {
+        try {
+          const { address, signature, message, chainId } = req.body;
+          
+          // Basic validation
+          if (!address || !signature) {
+            return res.status(400).json({
+              success: false,
+              error: 'Invalid authentication data'
+            });
+          }
+          
+          // Generate JWT token
+          const accessToken = generateAccessToken({
+            userId: address,
+            address,
+            role: 'user',
+            chainId: chainId || 1
+          });
+          
+          const refreshToken = generateRefreshToken({
+            userId: address,
+            address
+          });
+
+          res.json({
+            success: true,
+            accessToken,
+            refreshToken,
+            address,
+            expiresIn: '24h'
+          });
+        } catch (error) {
+          this.logger.error('JWT auth failed:', error);
+          res.status(500).json({
+            success: false,
+            error: 'Token generation failed'
+          });
+        }
+      }
+    );
+
+    // Logout endpoint
+    this.app.post('/auth/logout', optionalAuth, (req: AuthenticatedRequest, res) => {
+      if (req.sessionId) {
+        destroySession(req.sessionId);
+      }
+      
+      res.json({
+        success: true,
+        message: 'Logged out successfully'
+      });
+    });
   }
 
   private setupSecureTradingRoutes(): void {
-    // Secure trading routes implementation will be added here  
-    // This is a placeholder for the missing import dependencies
+    // Placeholder for secure trading routes that require proper authentication
+    // For now, these will be simple implementations
+    
+    this.app.post('/api/v2/orders',
+      optionalAuth,
+      ipRateLimit(10, 60 * 1000), // 10 orders per minute
+      async (req: AuthenticatedRequest, res) => {
+        try {
+          // Basic order validation
+          const { side, amount, price, tokenIn, tokenOut } = req.body;
+          
+          if (!side || !amount || !price || !tokenIn || !tokenOut) {
+            return res.status(400).json({
+              success: false,
+              error: 'Missing required order fields'
+            });
+          }
+
+          // Mock order creation
+          const orderId = `order_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+          
+          res.json({
+            success: true,
+            order: {
+              id: orderId,
+              side,
+              amount,
+              price,
+              tokenIn,
+              tokenOut,
+              status: 'pending',
+              timestamp: Date.now()
+            }
+          });
+        } catch (error) {
+          this.logger.error('Order placement failed:', error);
+          res.status(500).json({
+            success: false,
+            error: 'Order placement failed'
+          });
+        }
+      }
+    );
+
+    this.app.post('/api/v2/swap',
+      optionalAuth,
+      ipRateLimit(5, 60 * 1000), // 5 swaps per minute
+      async (req: AuthenticatedRequest, res) => {
+        try {
+          const { tokenIn, tokenOut, amountIn } = req.body;
+          
+          if (!tokenIn || !tokenOut || !amountIn) {
+            return res.status(400).json({
+              success: false,
+              error: 'Missing required swap fields'
+            });
+          }
+
+          // Mock swap execution
+          const swapId = `swap_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+          const amountOut = parseFloat(amountIn) * 0.95; // Mock 5% slippage
+          
+          res.json({
+            success: true,
+            swap: {
+              id: swapId,
+              tokenIn,
+              tokenOut,
+              amountIn,
+              amountOut: amountOut.toString(),
+              timestamp: Date.now()
+            }
+          });
+        } catch (error) {
+          this.logger.error('Swap execution failed:', error);
+          res.status(500).json({
+            success: false,
+            error: 'Swap execution failed'
+          });
+        }
+      }
+    );
   }
 
   private setupPublicRoutes(): void {
-    // Public routes implementation will be added here
-    // This is a placeholder for the missing import dependencies  
+    // Public market data with rate limiting
+    this.app.get('/api/public/orderbook/:pair',
+      ipRateLimit(100, 60 * 1000), // 100 requests per minute
+      (req, res) => {
+        try {
+          const { pair } = req.params;
+          const [base, quote] = pair.split('-');
+          
+          if (!base || !quote) {
+            return res.status(400).json({
+              success: false,
+              error: 'Invalid trading pair format. Use BASE-QUOTE'
+            });
+          }
+          
+          const pair_full = `${base}-${quote}`;
+          const orderbook = this.orderBookManager.getOrderBook(pair_full);
+          
+          res.json({
+            success: true,
+            pair,
+            orderbook: orderbook || { bids: [], asks: [] },
+            timestamp: Date.now()
+          });
+        } catch (error) {
+          this.logger.error('Orderbook fetch failed:', error);
+          res.status(500).json({
+            success: false,
+            error: 'Failed to fetch orderbook'
+          });
+        }
+      }
+    );
+
+    // Public price data
+    this.app.get('/api/public/prices',
+      ipRateLimit(120, 60 * 1000), // 120 requests per minute
+      (req, res) => {
+        try {
+          // Mock price data for now
+          const prices = {
+            'ETH-USDC': { price: 3500, change24h: 2.5 },
+            'BTC-USDC': { price: 65000, change24h: 1.8 },
+            'USDT-USDC': { price: 1.001, change24h: 0.1 }
+          };
+          
+          res.json({
+            success: true,
+            prices,
+            timestamp: Date.now()
+          });
+        } catch (error) {
+          this.logger.error('Price fetch failed:', error);
+          res.status(500).json({
+            success: false,
+            error: 'Failed to fetch prices'
+          });
+        }
+      }
+    );
+
+    // Public trading pairs
+    this.app.get('/api/public/pairs',
+      ipRateLimit(60, 60 * 1000), // 60 requests per minute
+      (req, res) => {
+        try {
+          const pairs = [
+            { base: 'ETH', quote: 'USDC', active: true },
+            { base: 'BTC', quote: 'USDC', active: true },
+            { base: 'USDT', quote: 'USDC', active: true }
+          ];
+          
+          res.json({
+            success: true,
+            pairs,
+            timestamp: Date.now()
+          });
+        } catch (error) {
+          res.status(500).json({
+            success: false,
+            error: 'Failed to fetch trading pairs'
+          });
+        }
+      }
+    );
   }
 
   private setupAdminRoutes(): void {
-    // Admin routes implementation will be added here
-    // This is a placeholder for the missing import dependencies
+    // Admin-only security dashboard
+    this.app.get('/admin/security',
+      optionalAuth, // In production, this would require admin auth
+      (req: AuthenticatedRequest, res) => {
+        const monitor = SecurityMonitor.getInstance();
+        const alerts = monitor.getRecentAlerts(60); // Last hour
+        
+        res.json({
+          success: true,
+          alerts,
+          summary: {
+            total: alerts.length,
+            critical: alerts.filter(a => a.type === 'CRITICAL').length,
+            warnings: alerts.filter(a => a.type === 'WARNING').length
+          },
+          timestamp: Date.now()
+        });
+      }
+    );
+
+    // Admin system status
+    this.app.get('/admin/status',
+      optionalAuth, // In production, this would require admin auth
+      (req: AuthenticatedRequest, res) => {
+        res.json({
+          success: true,
+          system: {
+            uptime: process.uptime(),
+            memory: process.memoryUsage(),
+            nodeVersion: process.version,
+            environment: process.env.NODE_ENV || 'development'
+          },
+          database: {
+            connected: true,
+            type: 'in-memory'
+          },
+          orderbook: {
+            activePairs: Array.from(this.orderBookManager['orderBooks'].keys()),
+            totalOrders: this.orderBookManager['orders'].size
+          },
+          timestamp: Date.now()
+        });
+      }
+    );
+
+    // Admin configuration
+    this.app.get('/admin/config',
+      optionalAuth, // In production, this would require admin auth
+      (req: AuthenticatedRequest, res) => {
+        res.json({
+          success: true,
+          config: {
+            blockchain: this.isBlockchainEnabled(),
+            database: this.isDatabaseEnabled(),
+            port: process.env.PORT || 3002,
+            rateLimit: {
+              enabled: true,
+              global: '1000 req/min',
+              trading: '10 orders/min'
+            }
+          },
+          timestamp: Date.now()
+        });
+      }
+    );
   }
 
   private setupEventHandlers(): void {

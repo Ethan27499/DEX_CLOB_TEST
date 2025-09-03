@@ -18,6 +18,7 @@ const websocket_1 = require("./websocket");
 const routes_1 = require("./routes");
 const logger_1 = require("./logger");
 const contract_manager_mock_1 = require("./contract-manager-mock");
+const auth_simple_1 = require("./security/auth-simple");
 dotenv_1.default.config();
 const setupSecurity = () => [
     (0, helmet_1.default)(),
@@ -217,12 +218,262 @@ class MatchingEngineServer {
         });
     }
     setupAuthRoutes() {
+        this.app.post('/auth/session', ipRateLimit(5, 15 * 60 * 1000), async (req, res) => {
+            try {
+                const { address, signature, message } = req.body;
+                if (!address || !signature) {
+                    return res.status(400).json({
+                        success: false,
+                        error: 'Invalid authentication data'
+                    });
+                }
+                const sessionId = (0, auth_simple_1.createSession)(address, address, req.ip || 'unknown');
+                res.json({
+                    success: true,
+                    sessionId,
+                    address,
+                    expiresIn: '24h'
+                });
+            }
+            catch (error) {
+                this.logger.error('Session auth failed:', error);
+                res.status(500).json({
+                    success: false,
+                    error: 'Authentication failed'
+                });
+            }
+        });
+        this.app.post('/auth/jwt', ipRateLimit(5, 15 * 60 * 1000), async (req, res) => {
+            try {
+                const { address, signature, message, chainId } = req.body;
+                if (!address || !signature) {
+                    return res.status(400).json({
+                        success: false,
+                        error: 'Invalid authentication data'
+                    });
+                }
+                const accessToken = (0, auth_simple_1.generateAccessToken)({
+                    userId: address,
+                    address,
+                    role: 'user',
+                    chainId: chainId || 1
+                });
+                const refreshToken = (0, auth_simple_1.generateRefreshToken)({
+                    userId: address,
+                    address
+                });
+                res.json({
+                    success: true,
+                    accessToken,
+                    refreshToken,
+                    address,
+                    expiresIn: '24h'
+                });
+            }
+            catch (error) {
+                this.logger.error('JWT auth failed:', error);
+                res.status(500).json({
+                    success: false,
+                    error: 'Token generation failed'
+                });
+            }
+        });
+        this.app.post('/auth/logout', optionalAuth, (req, res) => {
+            if (req.sessionId) {
+                (0, auth_simple_1.destroySession)(req.sessionId);
+            }
+            res.json({
+                success: true,
+                message: 'Logged out successfully'
+            });
+        });
     }
     setupSecureTradingRoutes() {
+        this.app.post('/api/v2/orders', optionalAuth, ipRateLimit(10, 60 * 1000), async (req, res) => {
+            try {
+                const { side, amount, price, tokenIn, tokenOut } = req.body;
+                if (!side || !amount || !price || !tokenIn || !tokenOut) {
+                    return res.status(400).json({
+                        success: false,
+                        error: 'Missing required order fields'
+                    });
+                }
+                const orderId = `order_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+                res.json({
+                    success: true,
+                    order: {
+                        id: orderId,
+                        side,
+                        amount,
+                        price,
+                        tokenIn,
+                        tokenOut,
+                        status: 'pending',
+                        timestamp: Date.now()
+                    }
+                });
+            }
+            catch (error) {
+                this.logger.error('Order placement failed:', error);
+                res.status(500).json({
+                    success: false,
+                    error: 'Order placement failed'
+                });
+            }
+        });
+        this.app.post('/api/v2/swap', optionalAuth, ipRateLimit(5, 60 * 1000), async (req, res) => {
+            try {
+                const { tokenIn, tokenOut, amountIn } = req.body;
+                if (!tokenIn || !tokenOut || !amountIn) {
+                    return res.status(400).json({
+                        success: false,
+                        error: 'Missing required swap fields'
+                    });
+                }
+                const swapId = `swap_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+                const amountOut = parseFloat(amountIn) * 0.95;
+                res.json({
+                    success: true,
+                    swap: {
+                        id: swapId,
+                        tokenIn,
+                        tokenOut,
+                        amountIn,
+                        amountOut: amountOut.toString(),
+                        timestamp: Date.now()
+                    }
+                });
+            }
+            catch (error) {
+                this.logger.error('Swap execution failed:', error);
+                res.status(500).json({
+                    success: false,
+                    error: 'Swap execution failed'
+                });
+            }
+        });
     }
     setupPublicRoutes() {
+        this.app.get('/api/public/orderbook/:pair', ipRateLimit(100, 60 * 1000), (req, res) => {
+            try {
+                const { pair } = req.params;
+                const [base, quote] = pair.split('-');
+                if (!base || !quote) {
+                    return res.status(400).json({
+                        success: false,
+                        error: 'Invalid trading pair format. Use BASE-QUOTE'
+                    });
+                }
+                const pair_full = `${base}-${quote}`;
+                const orderbook = this.orderBookManager.getOrderBook(pair_full);
+                res.json({
+                    success: true,
+                    pair,
+                    orderbook: orderbook || { bids: [], asks: [] },
+                    timestamp: Date.now()
+                });
+            }
+            catch (error) {
+                this.logger.error('Orderbook fetch failed:', error);
+                res.status(500).json({
+                    success: false,
+                    error: 'Failed to fetch orderbook'
+                });
+            }
+        });
+        this.app.get('/api/public/prices', ipRateLimit(120, 60 * 1000), (req, res) => {
+            try {
+                const prices = {
+                    'ETH-USDC': { price: 3500, change24h: 2.5 },
+                    'BTC-USDC': { price: 65000, change24h: 1.8 },
+                    'USDT-USDC': { price: 1.001, change24h: 0.1 }
+                };
+                res.json({
+                    success: true,
+                    prices,
+                    timestamp: Date.now()
+                });
+            }
+            catch (error) {
+                this.logger.error('Price fetch failed:', error);
+                res.status(500).json({
+                    success: false,
+                    error: 'Failed to fetch prices'
+                });
+            }
+        });
+        this.app.get('/api/public/pairs', ipRateLimit(60, 60 * 1000), (req, res) => {
+            try {
+                const pairs = [
+                    { base: 'ETH', quote: 'USDC', active: true },
+                    { base: 'BTC', quote: 'USDC', active: true },
+                    { base: 'USDT', quote: 'USDC', active: true }
+                ];
+                res.json({
+                    success: true,
+                    pairs,
+                    timestamp: Date.now()
+                });
+            }
+            catch (error) {
+                res.status(500).json({
+                    success: false,
+                    error: 'Failed to fetch trading pairs'
+                });
+            }
+        });
     }
     setupAdminRoutes() {
+        this.app.get('/admin/security', optionalAuth, (req, res) => {
+            const monitor = SecurityMonitor.getInstance();
+            const alerts = monitor.getRecentAlerts(60);
+            res.json({
+                success: true,
+                alerts,
+                summary: {
+                    total: alerts.length,
+                    critical: alerts.filter(a => a.type === 'CRITICAL').length,
+                    warnings: alerts.filter(a => a.type === 'WARNING').length
+                },
+                timestamp: Date.now()
+            });
+        });
+        this.app.get('/admin/status', optionalAuth, (req, res) => {
+            res.json({
+                success: true,
+                system: {
+                    uptime: process.uptime(),
+                    memory: process.memoryUsage(),
+                    nodeVersion: process.version,
+                    environment: process.env.NODE_ENV || 'development'
+                },
+                database: {
+                    connected: true,
+                    type: 'in-memory'
+                },
+                orderbook: {
+                    activePairs: Array.from(this.orderBookManager['orderBooks'].keys()),
+                    totalOrders: this.orderBookManager['orders'].size
+                },
+                timestamp: Date.now()
+            });
+        });
+        this.app.get('/admin/config', optionalAuth, (req, res) => {
+            res.json({
+                success: true,
+                config: {
+                    blockchain: this.isBlockchainEnabled(),
+                    database: this.isDatabaseEnabled(),
+                    port: process.env.PORT || 3002,
+                    rateLimit: {
+                        enabled: true,
+                        global: '1000 req/min',
+                        trading: '10 orders/min'
+                    }
+                },
+                timestamp: Date.now()
+            });
+        });
     }
     setupEventHandlers() {
         this.orderBookManager.on('orderAdded', (order) => {
